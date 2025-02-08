@@ -1,0 +1,197 @@
+{
+  "church": {
+    "name": "Iglesia Nueva Creación"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "home": {
+    "welcome": "Bienvenidos a Iglesia Nueva Creación",
+    "subtitle": "Un lugar de adoración, comunidad y crecimiento espiritual",
+    "worship": {
+      "title": "Adora Con Nosotros",
+      "description": "Experimenta una adoración significativa a través de la música, la oración y la Palabra de Dios"
+    },
+    "community": {
+      "title": "Únete a Nuestra Comunidad",
+      "description": "Conéctate con otros y crece junto a ellos en fe y comunión"
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Compartir el amor de Dios y hacer discípulos en nuestra comunidad y más allá"
+    },
+    "schedule": {
+      "title": "Horario Semanal",
+      "sunday": {
+        "title": "Servicio Dominical",
+        "time": "10:00 AM",
+        "description": "Únete a nosotros para adoración, oración y enseñanza bíblica"
+      },
+      "wednesday": {
+        "title": "Estudio Bíblico Miércoles",
+        "time": "7:00 PM",
+        "description": "Estudio y reunión de oración a mitad de semana"
+      },
+      "youth": {
+        "title": "Grupo de Jóvenes",
+        "time": "Viernes 6:30 PM",
+        "description": "Comunión y diversión para adolescentes y jóvenes adultos"
+      }
+    }
+  },
+  "about": {
+    "title": "Sobre Nuestra Iglesia",
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Compartir el amor de Cristo, hacer discípulos y servir a nuestra comunidad a través de la adoración, la comunión y el alcance."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "description": "Ser una comunidad vibrante y centrada en Cristo que transforma vidas e impacta nuestra ciudad con el Evangelio."
+    },
+    "values": {
+      "title": "Nuestros Valores Fundamentales",
+      "faith": {
+        "title": "Fe Bíblica",
+        "description": "Fundamentados en las Escrituras y comprometidos con la sana doctrina"
+      },
+      "community": {
+        "title": "Comunidad Auténtica",
+        "description": "Construyendo relaciones significativas y apoyándonos mutuamente"
+      },
+      "service": {
+        "title": "Liderazgo Servidor",
+        "description": "Siguiendo el ejemplo de Cristo en servir a otros con humildad"
+      }
+    },
+    "leadership": {
+      "title": "Nuestro Equipo de Liderazgo",
+      "pastor": {
+        "name": "Pastor Juan Smith",
+        "role": "Pastor Principal",
+        "description": "Sirviendo a nuestra familia de la iglesia por más de 15 años",
+        "image": "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c"
+      },
+      "elder1": {
+        "name": "David Johnson",
+        "role": "Anciano",
+        "description": "Liderando nuestras iniciativas de alcance comunitario",
+        "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7"
+      },
+      "elder2": {
+        "name": "Miguel Brown",
+        "role": "Anciano",
+        "description": "Supervisando el discipulado y grupos pequeños",
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+      }
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios y Ministerios",
+    "weekly": {
+      "title": "Servicios Semanales",
+      "sunday": {
+        "title": "Culto Dominical",
+        "time": "10:00 AM",
+        "description": "Nuestro servicio principal con alabanza, oración y enseñanza"
+      },
+      "wednesday": {
+        "title": "Estudio Bíblico",
+        "time": "7:00 PM",
+        "description": "Estudio y reunión de oración a mitad de semana"
+      },
+      "youth": {
+        "title": "Servicio de Jóvenes",
+        "time": "Viernes 6:30 PM",
+        "description": "Adoración dinámica y enseñanza para jóvenes"
+      }
+    },
+    "events": {
+      "title": "Eventos Especiales",
+      "christmas": {
+        "title": "Servicio de Navidad",
+        "date": "24 y 25 de Diciembre",
+        "description": "Celebra el nacimiento de Cristo con servicios especiales"
+      },
+      "easter": {
+        "title": "Celebración de Pascua",
+        "date": "Abril (Fecha varía)",
+        "description": "Únete a nosotros para la Semana Santa y servicios de Pascua"
+      },
+      "retreat": {
+        "title": "Retiro Anual",
+        "date": "Verano",
+        "description": "Un tiempo de renovación espiritual y comunión"
+      },
+      "conference": {
+        "title": "Conferencia Familiar",
+        "date": "Otoño",
+        "description": "Construyendo familias más fuertes a través de la Palabra de Dios"
+      }
+    },
+    "ministries": {
+      "title": "Nuestros Ministerios",
+      "children": {
+        "title": "Ministerio de Niños",
+        "description": "Nutriendo corazones jóvenes en la fe y la verdad bíblica"
+      },
+      "youth": {
+        "title": "Ministerio de Jóvenes",
+        "description": "Empoderando a los adolescentes para vivir para Cristo"
+      },
+      "women": {
+        "title": "Ministerio de Mujeres",
+        "description": "Apoyando y animando a las mujeres en su camino de fe"
+      },
+      "men": {
+        "title": "Ministerio de Hombres",
+        "description": "Construyendo hombres piadosos a través de la comunión y el discipulado"
+      },
+      "missions": {
+        "title": "Misiones",
+        "description": "Alcanzando nuestra comunidad y el mundo con el amor de Dios"
+      },
+      "worship": {
+        "title": "Ministerio de Adoración",
+        "description": "Guiando a la congregación en alabanza y adoración"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Nos encantaría saber de ti. Ponte en contacto con nosotros para cualquier pregunta o petición de oración.",
+    "phone": {
+      "title": "Teléfono",
+      "value": "(555) 123-4567"
+    },
+    "email": {
+      "title": "Correo",
+      "value": "info@gracechurch.com"
+    },
+    "address": {
+      "title": "Dirección",
+      "value": "123 Calle Principal, Ciudad, Estado 12345"
+    },
+    "form": {
+      "name": "Tu Nombre",
+      "email": "Tu Correo",
+      "subject": "Asunto",
+      "message": "Tu Mensaje",
+      "submit": "Enviar Mensaje"
+    }
+  },
+  "footer": {
+    "address": "123 Calle Principal, Ciudad, Estado 12345",
+    "phone": "(555) 123-4567",
+    "email": "info@gracechurch.com",
+    "service_times": "Horarios de Servicio",
+    "sunday_service": "Domingo: 10:00 AM",
+    "wednesday_service": "Miércoles: 7:00 PM",
+    "youth_service": "Jóvenes (Viernes): 6:30 PM",
+    "follow_us": "Síguenos",
+    "rights": "Todos los derechos reservados"
+  }
+}

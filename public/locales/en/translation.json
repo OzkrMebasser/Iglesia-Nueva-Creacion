@@ -1,0 +1,197 @@
+{
+  "church": {
+    "name": "Iglesia Nueva Creación"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Welcome to Iglesia Nueva Creación",
+    "subtitle": "A place of worship, community, and spiritual growth",
+    "worship": {
+      "title": "Worship With Us",
+      "description": "Experience meaningful worship through music, prayer, and the Word of God"
+    },
+    "community": {
+      "title": "Join Our Community",
+      "description": "Connect with others and grow together in faith and fellowship"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Sharing God's love and making disciples in our community and beyond"
+    },
+    "schedule": {
+      "title": "Weekly Schedule",
+      "sunday": {
+        "title": "Sunday Service",
+        "time": "10:00 AM",
+        "description": "Join us for worship, prayer, and biblical teaching"
+      },
+      "wednesday": {
+        "title": "Wednesday Bible Study",
+        "time": "7:00 PM",
+        "description": "Mid-week study and prayer meeting"
+      },
+      "youth": {
+        "title": "Youth Group",
+        "time": "Friday 6:30 PM",
+        "description": "Fellowship and fun for teens and young adults"
+      }
+    }
+  },
+  "about": {
+    "title": "About Our Church",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To share the love of Christ, make disciples, and serve our community through worship, fellowship, and outreach."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be a vibrant, Christ-centered community that transforms lives and impacts our city with the Gospel."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "faith": {
+        "title": "Biblical Faith",
+        "description": "Grounded in Scripture and committed to sound doctrine"
+      },
+      "community": {
+        "title": "Authentic Community",
+        "description": "Building meaningful relationships and supporting one another"
+      },
+      "service": {
+        "title": "Servant Leadership",
+        "description": "Following Christ's example in serving others with humility"
+      }
+    },
+    "leadership": {
+      "title": "Our Leadership Team",
+      "pastor": {
+        "name": "Pastor John Smith",
+        "role": "Senior Pastor",
+        "description": "Serving our church family for over 15 years",
+        "image": "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c"
+      },
+      "elder1": {
+        "name": "David Johnson",
+        "role": "Elder",
+        "description": "Leading our community outreach initiatives",
+        "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7"
+      },
+      "elder2": {
+        "name": "Michael Brown",
+        "role": "Elder",
+        "description": "Overseeing discipleship and small groups",
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services & Ministries",
+    "weekly": {
+      "title": "Weekly Services",
+      "sunday": {
+        "title": "Sunday Worship",
+        "time": "10:00 AM",
+        "description": "Our main worship service with praise, prayer, and teaching"
+      },
+      "wednesday": {
+        "title": "Bible Study",
+        "time": "7:00 PM",
+        "description": "Mid-week study and prayer gathering"
+      },
+      "youth": {
+        "title": "Youth Service",
+        "time": "Friday 6:30 PM",
+        "description": "Dynamic worship and teaching for young people"
+      }
+    },
+    "events": {
+      "title": "Special Events",
+      "christmas": {
+        "title": "Christmas Service",
+        "date": "December 24 & 25",
+        "description": "Celebrate the birth of Christ with special services"
+      },
+      "easter": {
+        "title": "Easter Celebration",
+        "date": "April (Date varies)",
+        "description": "Join us for Holy Week and Easter Sunday services"
+      },
+      "retreat": {
+        "title": "Annual Retreat",
+        "date": "Summer",
+        "description": "A time of spiritual renewal and fellowship"
+      },
+      "conference": {
+        "title": "Family Conference",
+        "date": "Fall",
+        "description": "Building stronger families through God's Word"
+      }
+    },
+    "ministries": {
+      "title": "Our Ministries",
+      "children": {
+        "title": "Children's Ministry",
+        "description": "Nurturing young hearts in faith and biblical truth"
+      },
+      "youth": {
+        "title": "Youth Ministry",
+        "description": "Empowering teens to live for Christ"
+      },
+      "women": {
+        "title": "Women's Ministry",
+        "description": "Supporting and encouraging women in their faith journey"
+      },
+      "men": {
+        "title": "Men's Ministry",
+        "description": "Building godly men through fellowship and discipleship"
+      },
+      "missions": {
+        "title": "Missions",
+        "description": "Reaching our community and world with God's love"
+      },
+      "worship": {
+        "title": "Worship Ministry",
+        "description": "Leading the congregation in praise and worship"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We'd love to hear from you. Get in touch with us for any questions or prayer requests.",
+    "phone": {
+      "title": "Phone",
+      "value": "(555) 123-4567"
+    },
+    "email": {
+      "title": "Email",
+      "value": "info@gracechurch.com"
+    },
+    "address": {
+      "title": "Address",
+      "value": "123 Main Street, City, State 12345"
+    },
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "address": "123 Main Street, City, State 12345",
+    "phone": "(555) 123-4567",
+    "email": "info@gracechurch.com",
+    "service_times": "Service Times",
+    "sunday_service": "Sunday: 10:00 AM",
+    "wednesday_service": "Wednesday: 7:00 PM",
+    "youth_service": "Youth (Friday): 6:30 PM",
+    "follow_us": "Follow Us",
+    "rights": "All rights reserved"
+  }
+}
