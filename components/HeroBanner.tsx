@@ -16,7 +16,10 @@ const HeroBanner = () => {
     
  
   return (
-    <section className="bg-[black] h-[auto]">
+    <section className="bg-[black] h-[auto]" 
+      data-aos-delay="400"
+    data-aos-duration="2500"
+    >
       <div className="lg:px-8 mx-auto">
         <div className="flex items-center h-full lg:relative lg:-space-x-24">
           <div className="text-white flex-1 absolute lg:relative z-10 pl-6 lg:pl-0">

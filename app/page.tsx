@@ -10,13 +10,15 @@ import "aos/dist/aos.css";
 
 export default function Home() {
   const { t } = useTranslation()
+  // Initialize AOS library
+    
   useEffect(() => {
     Aos.init({ duration: 2500, delay: 400 });
   }, []);
 
   return (
     <div>
-      <HeroBanner />
+      <HeroBanner  />
       {/* Hero Section */}
       <div className="relative h-[600px]">
         <Image
