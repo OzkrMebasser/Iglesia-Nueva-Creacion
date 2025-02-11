@@ -79,19 +79,24 @@ export default function Navbar() {
             {navLinks.map((link) => (
            
 
-             <Link
-               key={link.href}
-               href={link.href}
-               className={`${
-                 pathname === link.href ? "text-lg font-bold" : "text-base"
-               } ${
-                 isScrolled
-                   ? "text-[#21739e] hover:text-[#6dc0ea] before:bg-[#21739e] after:bg-[#21739e]"
-                   : "text-[#6dc0ea] hover:text-[#21739e] before:bg-[#6dc0ea] after:bg-[#6dc0ea]"
-               } tab-nav relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]`}
-             >
-               <span>{link.label}</span>
-             </Link>
+           <Link
+           key={link.href}
+           href={link.href}
+           className={`relative cursor-pointer transition-all ease-in-out 
+             ${pathname === link.href ? "text-lg font-bold before:w-[50%] after:w-[50%]" : "text-base before:w-0 after:w-0"} 
+             ${isScrolled 
+               ? "text-[#21739e] hover:text-[#6dc0ea] before:bg-[#21739e] after:bg-[#21739e]"
+               : "text-[#6dc0ea] hover:text-[#21739e] before:bg-[#6dc0ea] after:bg-[#6dc0ea]"
+             } 
+             before:transition-[width] before:ease-in-out before:duration-700 
+             before:absolute before:origin-center before:h-[1px] before:bottom-0 before:left-[50%] 
+             after:transition-[width] after:ease-in-out after:duration-700 
+             after:absolute after:origin-center after:h-[1px] after:bottom-0 after:right-[50%]`
+           }
+         >
+           <span>{link.label}</span>
+         </Link>
+         
              
             ))}
 
