@@ -13,8 +13,6 @@ const dancingScript = Dancing_Script({
   display: "swap",
 });
 
-
-
 const HeroBanner = () => {
   useEffect(() => {
     const AOS = require("aos");
@@ -40,11 +38,17 @@ const HeroBanner = () => {
                 data-aos="fade-down"
                 data-aos-delay="500"
               >
-                <span className="block text-2xl lg:text-5xl font-bold text-white [text-shadow:_2px_3px_9px_#000000] lg:text-shadow-none">
-                ¡Bienvenidos!
-                
-                </span>
-               
+                <BlurText
+                  text="¡Bienvenidos!"
+                  delay={150}
+                  animateBy="words"
+                  direction="top"
+                  onAnimationComplete={handleAnimationComplete}
+                  className="text-2xl mb-8 mt-0 lg:text-5xl font-bold text-white [text-shadow:_2px_3px_9px_#000000] lg:text-shadow-none"
+                />
+                {/* <span className="block text-2xl lg:text-5xl font-bold text-white [text-shadow:_2px_3px_9px_#000000] lg:text-shadow-none">
+                  ¡Bienvenidos!
+                </span> */}
               </h1>
               <p
                 className="mt-10 lg:mt-24  text-[white] [text-shadow:_2px_3px_9px_#000000] font-black "
@@ -63,7 +67,7 @@ const HeroBanner = () => {
                       "fe",
                       "esperanza",
                     ]}
-                    mainClassName="w-[150px] ml-[8.6rem] mx-auto -mt-[1.6rem] lg:-mt-8 text-white  overflow-hidden py-0.5 sm:py-1 md:py-2 justify-left rounded-lg"
+                    mainClassName="w-[150px] ml-[8.9rem] mx-auto -mt-[1.6rem] lg:-mt-8 text-white  overflow-hidden py-0.5 sm:py-1 md:py-2 justify-left rounded-lg"
                     staggerFrom={"last"}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
