@@ -329,3 +329,49 @@ body {
     transform: rotateX(360deg);
   }
 }
+
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.4s;
+}
+
+.ham .line {
+  fill: none;
+  transition: stroke-dasharray 0.4s, stroke-dashoffset 0.4s;
+  stroke: #000;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham6 .top {
+  stroke-dasharray: 40 121;
+}
+
+.ham6 .middle {
+  stroke-dasharray: 40 121;
+}
+
+.ham6 .bottom {
+  stroke-dasharray: 40 121;
+}
+
+.ham6.active {
+  transform: rotate(180deg);
+}
+
+.ham6.active .top {
+  stroke-dasharray: 25 121;
+  stroke-dashoffset: -102;
+}
+
+.ham6.active .middle {
+  stroke-dasharray: 0 121;
+  stroke-dashoffset: -102;
+}
+
+.ham6.active .bottom {
+  stroke-dasharray: 25 121;
+  stroke-dashoffset: -102;
+}

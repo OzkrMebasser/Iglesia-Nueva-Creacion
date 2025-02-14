@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import BlurText from "@/components/ui/BlurText";
 import { Dancing_Script } from "next/font/google";
 import RotatingText from "@/components/ui/RotatingText";
+import { ArrowRight } from "lucide-react";
 
 import Link from "next/link";
 import "@/app/globals.css";
@@ -33,41 +34,40 @@ const HeroBanner = () => {
         <div className="lg:pl-8 mx-auto">
           <div className="flex items-center h-full lg:relative lg:-space-x-24">
             <div className=" flex-1 absolute lg:relative z-10 pl-6 lg:pl-0">
-              <h1
-                className="mb-8 mt-[16rem] lg:mt-[4rem] "
-                data-aos="fade-down"
-                data-aos-delay="500"
-              >
+              <h1 className=" mt-[12rem] lg:mt-[4rem] ">
                 <BlurText
                   text="¡Bienvenidos!"
-                  delay={150}
+                  delay={15500}
                   animateBy="words"
                   direction="top"
                   onAnimationComplete={handleAnimationComplete}
-                  className="text-2xl mb-8 mt-0 lg:text-5xl font-bold text-white [text-shadow:_2px_3px_9px_#000000] lg:text-shadow-none"
+                  className="text-3xl mt-0 lg:text-5xl font-black text-white [text-shadow:_2px_3px_9px_#000000] lg:text-shadow-none"
                 />
                 {/* <span className="block text-2xl lg:text-5xl font-bold text-white [text-shadow:_2px_3px_9px_#000000] lg:text-shadow-none">
                   ¡Bienvenidos!
                 </span> */}
               </h1>
               <p
-                className="mt-10 lg:mt-24  text-[white] [text-shadow:_2px_3px_9px_#000000] font-black "
+                className=" lg:mt-6 text-[1.2rem] lg:text-4xl font-black  "
                 data-aos="fade-down"
                 data-aos-delay="600"
               >
-                <span className="">
+                <span className="text-[white] [text-shadow:_2px_3px_9px_#000000]">
                   {" "}
                   Aqui encontrarás
+                </span>
+                <span className="relative inline-block ml-1">
                   <RotatingText
                     texts={[
-                      "el amor de Dios",
-                      "restauración",
-                      "libertad",
-                      "paz",
                       "fe",
+                      "paz",
+                      "libertad",
                       "esperanza",
+                      "nueva vida",
+                      "restauración",
+                      "el amor de Dios",
                     ]}
-                    mainClassName="w-[150px] ml-[8.9rem] mx-auto -mt-[1.6rem] lg:-mt-8 text-white  overflow-hidden py-0.5 sm:py-1 md:py-2 justify-left rounded-lg"
+                    mainClassName="text-[#21739e] w-full mx-auto overflow-hidden  bg-white p-[5px] rounded-lg"
                     staggerFrom={"last"}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
@@ -77,20 +77,22 @@ const HeroBanner = () => {
                     transition={{ type: "spring", damping: 30, stiffness: 400 }}
                     rotationInterval={2000}
                   />
-                  {/* <RotatingCubeText /> */}
                 </span>
               </p>
 
-              <button
-                className="hidden lg:block shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mt-6 border-[1.5px] border-white bg-[#147EFB] text-white rounded-lg px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                data-aos="fade-down"
-                data-aos-delay="700"
-              >
-                <Link href="/contact">Conócenos</Link>
-              </button>
+              <div className="relative inline-block mt-6" data-aos="fade-up">
+                <button className="group relative font-inherit text-[1rem] px-[1rem] lg:px-[2.75rem] py-[0.625rem] tracking-[0.06em] rounded-[0.625rem] overflow-hidden transition-all duration-300 border-2 border-[#white] bg-gradient-to-r from-[rgba(109,192,234,0.1)] via-transparent to-[rgba(109,192,234,0.1)] text-[#6dc0ea] shadow-[inset_0_0_10px_rgba(109,192,234,0.4),0_0_9px_3px_rgba(109,192,234,0.1)] hover:text-[#b3e3ff] hover:shadow-[inset_0_0_10px_rgba(109,192,234,0.6),0_0_9px_3px_rgba(109,192,234,0.2)] sm:bg-[rgba(109,192,234,0.3)]">
+                  <span className="relative z-10 flex items-center gap-2 text-white font-bold lg">
+                    Contáctanos
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                  <span className="absolute top-0 left-[-6.5rem] w-[6.5rem] h-full bg-gradient-to-r from-transparent via-[rgba(109,192,234,0.1)] to-transparent transition-transform duration-400 ease-in-out group-hover:translate-x-[18rem] sm:via-[rgba(109,192,234,0.3)]"></span>
+                </button>
+              </div>
+             
             </div>
             <div
-              className=" bg-[black] h-[72.4vh] lg:h-[100vh] w-full bg-banner bg-contain bg-center bg-no-repeat lg:bg-cover flex-1  lg:mt-0"
+              className=" bg-[#000000] h-[72.4vh] lg:h-[100vh] w-full bg-banner bg-contain bg-center bg-no-repeat lg:bg-cover flex-1  lg:mt-0"
               data-aos="fade-right"
               data-aos-delay="900"
             ></div>
