@@ -19,29 +19,10 @@ export default function Home() {
   return (
     <div>
  
- 
+  {/* Hero Section */}
       <HeroBanner />
-      {/* Hero Section */}
-      <div className="relative h-[600px]">
-        <Image
-          src="https://images.unsplash.com/photo-1438032005730-c779502df39b"
-          alt="Church"
-          fill
-          className="object-cover"
-          priority
-        />
-
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="text-center text-white px-4">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              {t("home.welcome")}
-            </h1>
-            <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-              {t("home.subtitle")}
-            </p>
-          </div>
-        </div>
-      </div>
+     
+    
 
       {/* Featured Sections */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

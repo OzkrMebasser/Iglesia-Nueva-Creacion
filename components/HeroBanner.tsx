@@ -92,7 +92,7 @@ const HeroBanner = () => {
              
             </div>
             <div
-              className=" bg-[#000000] h-[72.4vh] lg:h-[100vh] w-full bg-banner bg-contain bg-center bg-no-repeat lg:bg-cover flex-1  lg:mt-0"
+              className=" bg-[#000000] h-[62vh] lg:h-[100vh] w-full bg-banner bg-contain bg-center bg-no-repeat lg:bg-cover flex-1  lg:mt-0"
               data-aos="fade-right"
               data-aos-delay="900"
             ></div>
