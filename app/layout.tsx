@@ -13,8 +13,8 @@ const dancingScript = Dancing_Script({
   weight: ['400', '700']
 })
 export const metadata: Metadata = {
-  title: 'Grace Community Church',
-  description: 'A welcoming Christian community in the heart of the city',
+  title: 'Iglesia Nueva Creación',
+  description: 'Únete a nuestra comunidad cristiana y experimenta una adoración significativa a través de la música, la oración y la Palabra de Dios. Descubre nuestra misión de compartir el amor de Dios y hacer discípulos. Te esperamos en nuestros servicios semanales.',
 }
 
 export default function RootLayout({

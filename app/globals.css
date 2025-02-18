@@ -80,11 +80,14 @@
   }
   body {
     @apply bg-background text-foreground;
+
+   
   }
 }
 
 body {
   font-family: "Brush Script MT", "Comic Sans MS", cursive;
+  
 }
 
 .shining {
@@ -113,9 +116,18 @@ body {
   color: inherit;
 }
 
-.bg-banner {
-  /* background-image: url('https://firebasestorage.googleapis.com/v0/b/clean-aid-plus.appspot.com/o/cleaningGirls.jpg?alt=media&token=065b0b42-f179-49f8-82be-d5dbc809eab5'); */
+.bg-banner-lg {
   background-image: url("https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fpastores.jpg?alt=media&token=d4420584-115d-464e-be8a-f649134f6b7f");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+.bg-banner-mobile {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fpastores-new.jpg?alt=media&token=b838f84d-7c9c-4b7a-8ea0-15a349bef042");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
 }
 
 .font-dancing-script {
@@ -374,4 +386,27 @@ body {
 .ham6.active .bottom {
   stroke-dasharray: 25 121;
   stroke-dashoffset: -102;
+}
+
+
+/* .cross-bg {
+  --s: 30px;
+  --c1: #000000;
+  --c2: #63c3f2;
+  
+  background:
+    conic-gradient(at 60% 60%,var(--c1) 75%,#0000 0)
+     0 0/calc(5*var(--s)/2) calc(5*var(--s)/2),
+    repeating-conic-gradient(var(--c1) 0 25%,#0000 0 50%)
+     0 0/calc(5*var(--s)) calc(5*var(--s)),
+    repeating-conic-gradient(var(--c2) 0 25%,var(--c1) 0 50%)
+     0 0/var(--s) var(--s);
+} */
+
+
+.leaves-bg{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fllleaves.svg?alt=media&token=ab6dbe6a-ee7b-422e-8374-23bf0447752b');
+
+ 
+  
 }

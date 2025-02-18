@@ -15,6 +15,15 @@ const dancingScript = Dancing_Script({
 });
 
 const HeroBanner = () => {
+const [isMobile, setIsMobile ] =  useState(false);
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      setIsMobile(true);
+    }
+    
+    }, []);
+
+
   useEffect(() => {
     const AOS = require("aos");
     AOS.init();
@@ -27,14 +36,14 @@ const HeroBanner = () => {
   return (
     <>
       <section
-        className="bg-[black] h-[auto]"
+        className="bg-[#000000] h-[auto] "
         data-aos-delay="400"
         data-aos-duration="2500"
       >
         <div className="lg:pl-8 mx-auto">
           <div className="flex items-center h-full lg:relative lg:-space-x-24">
             <div className=" flex-1 absolute lg:relative z-10 pl-6 lg:pl-0">
-              <h1 className=" mt-[12rem] lg:mt-[4rem] ">
+              <h1 className=" mt-[22rem] lg:mt-[4rem] ">
                 <BlurText
                   text="¡Bienvenidos!"
                   delay={15500}
@@ -43,9 +52,6 @@ const HeroBanner = () => {
                   onAnimationComplete={handleAnimationComplete}
                   className="text-3xl mt-0 lg:text-5xl font-black text-white [text-shadow:_2px_3px_9px_#000000] lg:text-shadow-none"
                 />
-                {/* <span className="block text-2xl lg:text-5xl font-bold text-white [text-shadow:_2px_3px_9px_#000000] lg:text-shadow-none">
-                  ¡Bienvenidos!
-                </span> */}
               </h1>
               <p
                 className=" lg:mt-6 text-[1.2rem] lg:text-4xl font-black  "
@@ -67,7 +73,7 @@ const HeroBanner = () => {
                       "restauración",
                       "el amor de Dios",
                     ]}
-                    mainClassName="text-[#21739e] w-full mx-auto overflow-hidden  bg-white p-[5px] rounded-lg"
+                    mainClassName="text-[#21739e] w-full mx-auto overflow-hidden  bg-white p-[5px] rounded-lg shadow-lg"
                     staggerFrom={"last"}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
@@ -89,10 +95,10 @@ const HeroBanner = () => {
                   <span className="absolute top-0 left-[-6.5rem] w-[6.5rem] h-full bg-gradient-to-r from-transparent via-[rgba(109,192,234,0.1)] to-transparent transition-transform duration-400 ease-in-out group-hover:translate-x-[18rem] sm:via-[rgba(109,192,234,0.3)]"></span>
                 </button>
               </div>
-             
             </div>
+            {/* {"esta seccion me refiero"} */}
             <div
-              className=" bg-[#000000] h-[62vh] lg:h-[100vh] w-full bg-banner bg-contain bg-center bg-no-repeat lg:bg-cover flex-1  lg:mt-0"
+              className="bg-[#000000] h-[80vh] lg:h-[100vh] w-full bg-banner-mobile lg:bg-banner-lg flex-1 mt-[3.95rem]  lg:mt-0"
               data-aos="fade-right"
               data-aos-delay="900"
             ></div>

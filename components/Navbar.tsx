@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 import { Dancing_Script } from "next/font/google";
 import Link from "next/link";
@@ -19,6 +20,22 @@ export default function Navbar() {
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [isImageHidden, setIsImageHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setIsImageHidden(true);
+      } else {
+        setIsImageHidden(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const pathname = usePathname();
 
@@ -56,7 +73,7 @@ export default function Navbar() {
     <nav
       className={`${
         isScrolled ? "bg-[white] text-white" : "bg-[black]  text-gray-800"
-      } fixed top-0 w-full z-50 transition-all duration-300 ease-in-out`}
+      } fixed top-0 w-full z-50 transition-all duration-300 ease-in-out `}
     >
       {/* // <nav className="bg-white shadow-lg"> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,6 +86,18 @@ export default function Navbar() {
               } font-dancing-script text-2xl font-bold`}
             >
               {t("church.name")}
+              <Image
+                className={`h-8 w-8 inline ml-2 -scale-x-100 transition-all duration-1000 ease-in-out 
+    ${
+      isImageHidden
+        ? "-translate-x-32 opacity-0 scale-50 blur-md"
+        : "translate-x-0 opacity-100 scale-100 blur-0"
+    }`}
+                width="100"
+                height="100"
+                src="https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fpaloma-clearbg.png?alt=media&token=8bcd4a7d-c403-43a6-b65e-27d2ce1d2b43"
+                alt="Logo paloma"
+              />
             </Link>
           </div>
 
