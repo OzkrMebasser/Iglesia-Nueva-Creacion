@@ -60,7 +60,7 @@ const GridMotion: FC<GridMotionProps> = ({
           background: `radial-gradient(circle, ${gradientColor} 0%, transparent 100%)`,
         }}
       >
-        <div className="gap-4 flex-none relative w-[350vw] h-[100vh] lg:w-[150vw] lg:h-[150vh] grid grid-rows-4 grid-cols-1 rotate-[-15deg] origin-center z-[2]">
+        <div className="gap-4 flex-none relative w-[450vw] h-[100vh] lg:w-[150vw] lg:h-[150vh] grid grid-rows-4 grid-cols-1 rotate-[-15deg] origin-center z-[2]">
           {Array.from({ length: 4 }, (_, rowIndex) => (
             <div
               key={rowIndex}
