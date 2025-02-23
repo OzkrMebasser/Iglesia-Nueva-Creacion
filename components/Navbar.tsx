@@ -72,7 +72,7 @@ export default function Navbar() {
   return (
     <nav
       className={`${
-        isScrolled ? "bg-[white] text-white" : "bg-[black]  text-gray-800"
+        isScrolled ? "bg-[white] text-white shadow-md" : "bg-[black]  text-gray-800"
       } fixed top-0 w-full z-50 transition-all duration-300 ease-in-out `}
     >
       {/* // <nav className="bg-white shadow-lg"> */}
@@ -132,7 +132,13 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                className="flex items-center space-x-2 text-gray-600 hover:text-gray-900"
+                // className="flex items-center space-x-2 text-gray-600 hover:text-gray-900"
+
+                className={`flex items-center space-x-2   ${
+               isScrolled
+                 ? "text-[#21739e] hover:text-[#6dc0ea] before:bg-[#21739e] after:bg-[#21739e]"
+                 : "text-[#6dc0ea] hover:text-[#21739e] before:bg-[#6dc0ea] after:bg-[#6dc0ea]"
+             } `}
               >
                 <Globe size={20} />
                 <span>{i18n.language.toUpperCase()}</span>
@@ -142,13 +148,13 @@ export default function Navbar() {
                 <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                   <button
                     onClick={() => toggleLanguage("en")}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#21739e] hover:text-white w-full text-left"
                   >
                     English
                   </button>
                   <button
                     onClick={() => toggleLanguage("es")}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#21739e] hover:text-white w-full text-left"
                   >
                     Español
                   </button>

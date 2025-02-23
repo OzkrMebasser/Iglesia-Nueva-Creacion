@@ -1,23 +1,35 @@
 'use client'
-
+import GridMotion from '@/components/ui/GridMotion'
 import { useTranslation } from 'react-i18next'
 import Image from 'next/image'
+
 
 export default function About() {
   const { t } = useTranslation()
 
+  const items =[
+    "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fhero-grid-motion%2FiglesiaNuevaCreacion.jpg?alt=media&token=59155a30-52c7-4a32-800d-19441efcea16",
+"https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fhero-grid-motion%2FiglesiaNuevaCreacion.jpg?alt=media&token=59155a30-52c7-4a32-800d-19441efcea16"
+  ]
+
+  const imageUrl =
+  "https://images.pexels.com/photos/6134813/pexels-photo-6134813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+
+// const items = Array.from({ length: 28 }, () => imageUrl);
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="w-full mx-auto  py-16">
       {/* Hero Section */}
-      <div className="relative h-[400px] mb-16">
-        <Image
-          src="https://images.unsplash.com/photo-1548625149-fc4a29cf7092"
+      <div className="relative h-[80vh] mb-16">
+        {/* <Image
+          src="https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2FiglesiaNuevaCreacion.jpg?alt=media&token=ea641a35-f9f7-4682-994b-4fbf73ca9695"
           alt="Church Interior"
           fill
-          className="object-cover rounded-lg"
+          className="object-cover "
           priority
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg flex items-center justify-center">
+        /> */}
+        <GridMotion items={items} />
+
+        <div className="absolute inset-0 bg-[black] bg-opacity-30 rounded-lg flex items-center justify-center z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white">
             {t('about.title')}
           </h1>

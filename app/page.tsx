@@ -1,9 +1,8 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import HeroBanner from "@/components/HeroBanner";
-
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -32,25 +31,33 @@ const featuredSections: FeaturedSection[] = [
 
 export default function Home() {
   const { t } = useTranslation();
-  // Initialize AOS library
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     Aos.init({ duration: 2500, delay: 400 });
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100); // Si el scroll supera los 100px, alinea los divs
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div>
       {/* Hero Section */}
       <HeroBanner />
+
       {/* Featured Sections */}
       <div className="bg-cover bg-center bg-no-repeat leaves-bg bg-black">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-16 px-4 sm:px-6 lg:px-8">
           {featuredSections.map((section) => (
             <div
               key={section.id}
-              className="text-center bg-white rounded-lg "
-           data-aos="fade-right"
-            
+              className={`text-center bg-white rounded-lg transition-transform duration-500 ${
+                scrolled ? "rotate-0" : "rotate-[10deg]"
+              }`}
             >
               {section.image && (
                 <div className="mx-auto">
@@ -60,16 +67,15 @@ export default function Home() {
                     width={200}
                     height={200}
                     className="mx-auto h-[15rem] w-[15rem] object-contain"
+                    data-aos="zoom-in"
                   />
                 </div>
               )}
-              <div className="px-6 pb-6">
+              <div className="px-6 pb-6" data-aos="fade-up">
                 <h2 className="text-2xl font-bold mb-4">
                   {t(`home.${section.id}.title`)}
                 </h2>
-                <p className="text-gray-600">
-                  {t(`home.${section.id}.description`)}
-                </p>
+                <p className="text-gray-600">{t(`home.${section.id}.description`)}</p>
               </div>
             </div>
           ))}
@@ -88,12 +94,8 @@ export default function Home() {
                 <h3 className="text-xl font-bold mb-2">
                   {t(`home.schedule.${day}.title`)}
                 </h3>
-                <p className="text-gray-600 mb-2">
-                  {t(`home.schedule.${day}.time`)}
-                </p>
-                <p className="text-gray-600">
-                  {t(`home.schedule.${day}.description`)}
-                </p>
+                <p className="text-gray-600 mb-2">{t(`home.schedule.${day}.time`)}</p>
+                <p className="text-gray-600">{t(`home.schedule.${day}.description`)}</p>
               </div>
             ))}
           </div>
