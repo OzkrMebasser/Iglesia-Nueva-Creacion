@@ -26,19 +26,28 @@
     "schedule": {
       "title": "Horario Semanal",
       "sunday": {
-        "title": "Servicio Dominical",
+        "day": "Domingo",
+        "title": "Servicio General",
         "time": "10:00 AM",
-        "description": "Únete a nosotros para adoración, oración y enseñanza bíblica"
+        "description": "Únete a nosotros para un tiempo de adoración, oración y enseñanza bíblica"
       },
-      "wednesday": {
-        "title": "Estudio Bíblico Miércoles",
+      "tuesday": {
+        "day": "Martes",
+        "title": "Reunión de Oración",
         "time": "7:00 PM",
-        "description": "Estudio y reunión de oración a mitad de semana"
+        "description": "Un tiempo especial para buscar a Dios en oración"
       },
-      "youth": {
-        "title": "Grupo de Jóvenes",
-        "time": "Viernes 6:30 PM",
-        "description": "Comunión y diversión para adolescentes y jóvenes adultos"
+      "thursday": {
+        "day": "Jueves",
+        "title": "Estudio Bíblico",
+        "time": "7:00 PM",
+        "description": "Aprende más de la Palabra de Dios en nuestro estudio bíblico semanal"
+      },
+      "saturday": {
+        "day": "Sábado",
+        "title": "Reunión de Jóvenes",
+        "time": "5:00 PM",
+        "description": "Un espacio para que los jóvenes crezcan en su fe y compartan juntos"
       }
     }
   },

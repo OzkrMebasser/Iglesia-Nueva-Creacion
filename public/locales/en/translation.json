@@ -26,19 +26,28 @@
     "schedule": {
       "title": "Weekly Schedule",
       "sunday": {
-        "title": "Sunday Service",
+        "day": "Sunday",
+        "title": "General Service",
         "time": "10:00 AM",
-        "description": "Join us for worship, prayer, and biblical teaching"
+        "description": "Join us for a time of worship, prayer, and biblical teaching"
       },
-      "wednesday": {
-        "title": "Wednesday Bible Study",
+      "tuesday": {
+        "day": "Tuesday",
+        "title": "Prayer Meeting",
         "time": "7:00 PM",
-        "description": "Mid-week study and prayer meeting"
+        "description": "A special time to seek God in prayer"
       },
-      "youth": {
-        "title": "Youth Group",
-        "time": "Friday 6:30 PM",
-        "description": "Fellowship and fun for teens and young adults"
+      "thursday": {
+        "day": "Thursday",
+        "title": "Bible Study",
+        "time": "7:00 PM",
+        "description": "Learn more from God's Word in our weekly Bible study"
+      },
+      "saturday": {
+        "day": "Saturday",
+        "title": "Youth Meeting",
+        "time": "5:00 PM",
+        "description": "A space for young people to grow in faith and fellowship"
       }
     }
   },
