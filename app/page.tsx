@@ -38,7 +38,7 @@ export default function Home() {
     Aos.init({ duration: 2500, delay: 400 });
 
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100); // Si el scroll supera los 100px, alinea los divs
+      setScrolled(window.scrollY > 200);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -55,9 +55,9 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-16 px-4 sm:px-6 lg:px-8">
           {featuredSections.map((section) => (
             <div
+            data-aos="zoom-in"
               key={section.id}
-              className={`text-center bg-white rounded-lg transition-transform duration-500 ${
-                scrolled ? "rotate-0" : "rotate-[10deg]"
+              className={`text-center bg-white rounded-lg transition-transform duration-500 
               }`}
             >
               {section.image && (
@@ -68,7 +68,7 @@ export default function Home() {
                     width={200}
                     height={200}
                     className="mx-auto h-[15rem] w-[15rem] object-contain"
-                    data-aos="zoom-in"
+                    data-aos="zoom-in-up"
                   />
                 </div>
               )}
@@ -84,6 +84,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+    
       {/* Weekly Schedule */}
       <ServicesDays />
     </div>
