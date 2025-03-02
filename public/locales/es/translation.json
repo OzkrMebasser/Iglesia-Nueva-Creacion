@@ -11,6 +11,9 @@
   "home": {
     "welcome": "Bienvenidos a Iglesia Nueva Creación",
     "subtitle": "Un lugar de adoración, comunidad y crecimiento espiritual",
+    "live-your-faith": {
+      "title": "Vive tu Fe en Comunidad"
+    },
     "worship": {
       "title": "Adora Con Nosotros",
       "description": "Experimenta una adoración significativa a través de la música, la oración y la Palabra de Dios"
@@ -23,6 +26,13 @@
       "title": "Nuestra Misión",
       "description": "Compartir el amor de Dios y hacer discípulos en nuestra comunidad y más allá"
     },
+    "schedule-desc": {
+      "description": "Descubre un espacio de fe, comunión y crecimiento espiritual a lo largo de la semana. Desde momentos de adoración y enseñanza bíblica hasta reuniones de oración y encuentros juveniles, cada reunión está diseñada para fortalecer tu relación con Dios y con la comunidad. ¡Te esperamos para compartir juntos en la presencia de Dios!"
+    },
+    "weekly-schedule": {
+      "title": "Programa Semanal"
+    },
+  
     "schedule": {
       "title": "Horario Semanal",
       "sunday": {

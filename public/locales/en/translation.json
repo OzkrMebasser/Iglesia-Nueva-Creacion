@@ -11,6 +11,9 @@
   "home": {
     "welcome": "Welcome to Iglesia Nueva Creación",
     "subtitle": "A place of worship, community, and spiritual growth",
+    "live-your-faith": {
+      "title": "Live Your Faith in Community"
+    },
     "worship": {
       "title": "Worship With Us",
       "description": "Experience meaningful worship through music, prayer, and the Word of God"
@@ -22,6 +25,12 @@
     "mission": {
       "title": "Our Mission",
       "description": "Sharing God's love and making disciples in our community and beyond"
+    },
+    "weekly-schedule": {
+      "title": "Weekly Schedule"
+    },
+    "schedule-desc": {
+      "description": "Discover a space for faith, fellowship, and spiritual growth throughout the week. From moments of worship and biblical teaching to prayer meetings and youth gatherings, each gathering is designed to strengthen your relationship with God and the community. We invite you to join us and share in God's presence!"
     },
     "schedule": {
       "title": "Weekly Schedule",

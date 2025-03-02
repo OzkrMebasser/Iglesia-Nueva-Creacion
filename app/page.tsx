@@ -6,6 +6,8 @@ import HeroBanner from "@/components/HeroBanner";
 import ServicesDays from "@/components/ui/ServicesDays";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import ServicesCards from "@/components/ui/ServicesCards/ServicesCards";
+import Title from "@/components/ui/Title";
 
 interface FeaturedSection {
   id: string;
@@ -52,10 +54,16 @@ export default function Home() {
 
       {/* Featured Sections */}
       <div className="bg-cover bg-center bg-no-repeat leaves-bg bg-black">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-16 px-4 sm:px-6 lg:px-8">
+      <Title
+        title={t("home.live-your-faith.title")}
+        fontColor="primary-blue-text"
+        bgColor="bg-[transparent]"
+        borderSides="border-[#7c7b7b7e]"
+      />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-16 px-4 sm:px-6 lg:px-8">
           {featuredSections.map((section) => (
             <div
-            data-aos="zoom-in"
+              data-aos="zoom-in"
               key={section.id}
               className={`text-center bg-white rounded-lg transition-transform duration-500 
               }`}
@@ -85,9 +93,10 @@ export default function Home() {
         </div>
       </div>
 
-    
       {/* Weekly Schedule */}
-      <ServicesDays />
+      {/* <ServicesDays /> */}
+
+      <ServicesCards />
     </div>
   );
 }
