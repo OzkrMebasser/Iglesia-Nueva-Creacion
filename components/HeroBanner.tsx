@@ -4,6 +4,8 @@ import BlurText from "@/components/ui/BlurText";
 import { Dancing_Script } from "next/font/google";
 import RotatingText from "@/components/ui/RotatingText";
 import { ArrowRight } from "lucide-react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import Link from "next/link";
 import "@/app/globals.css";
@@ -15,18 +17,18 @@ const dancingScript = Dancing_Script({
 });
 
 const HeroBanner = () => {
-const [isMobile, setIsMobile ] =  useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     if (window.innerWidth <= 768) {
       setIsMobile(true);
     }
-    
-    }, []);
-
+  }, []);
 
   useEffect(() => {
-    const AOS = require("aos");
-    AOS.init();
+    // const AOS = require("aos");
+    // Aos.init();
+
+    // AOS.init();
   }, []);
 
   const handleAnimationComplete = () => {
@@ -38,7 +40,7 @@ const [isMobile, setIsMobile ] =  useState(false);
       <section
         className="bg-[#000000] h-[auto] "
         data-aos-delay="400"
-        data-aos-duration="2500"
+        data-aos-duration="3000"
       >
         <div className="lg:pl-8 mx-auto">
           <div className="flex items-center h-full lg:relative lg:-space-x-24">

@@ -10,7 +10,7 @@ interface TitleProps {
 const Title = ({ title, fontColor, bgColor, borderSides }: TitleProps) => {
 
   return (
-    <section className=" mx-auto text-center py-6  ">
+    <section className=" mx-auto text-center py-16  ">
      
       <h1 className={`${fontColor} ${bgColor}  border-2 rounded-lg ${borderSides}  border-b-[#21739e]  text-2xl lg:text-4xl font-black  w-auto inline-block py-3 px-2  `}>
         {title}
