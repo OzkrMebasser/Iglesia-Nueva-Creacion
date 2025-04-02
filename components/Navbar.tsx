@@ -72,13 +72,30 @@ export default function Navbar() {
   return (
     <nav
       className={`${
-        isScrolled ? "bg-[white] text-white shadow-md" : "bg-[black]  text-gray-800"
-      } fixed top-0 w-full z-50 transition-all duration-300 ease-in-out `}
+        isScrolled
+          ? "bg-[white] text-white shadow-md"
+          : "bg-[black]  text-gray-800"
+      } fixed top-0 w-full z-[99999] transition-all duration-300 ease-in-out `}
     >
       {/* // <nav className="bg-white shadow-lg"> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
+            <span
+              className={`bg-[#000000] p-2 rounded-full mr-2 shadow-[inset_1px_2px_44px_-9px_#6dc0ea]  ${
+      isImageHidden
+        ? "transition-all duration-1000 ease-in-out blur-0"
+        : "hidden blur-md"
+    }` }
+            >
+              <Image
+                className="h-8 w-8 inline  scale-x-100 transition-all duration-1000 ease-in-out "
+                width="100"
+                height="100"
+                src="https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fpaloma-clearbg.png?alt=media&token=8bcd4a7d-c403-43a6-b65e-27d2ce1d2b43"
+                alt="Logo paloma"
+              />
+            </span>
             <Link
               href="/"
               className={`${isScrolled ? "text-[#21739e]" : "text-[#6dc0ea]"} ${
@@ -86,19 +103,19 @@ export default function Navbar() {
               } font-dancing-script text-2xl font-bold`}
             >
               {t("church.name")}
-              <Image
-                className={`h-8 w-8 inline ml-2 -scale-x-100 transition-all duration-1000 ease-in-out 
+            </Link>
+            <Image
+              className={`h-8 w-8 inline ml-2 -scale-x-100 transition-all duration-1000 ease-in-out 
     ${
       isImageHidden
         ? "-translate-x-32 opacity-0 scale-50 blur-md"
         : "translate-x-0 opacity-100 scale-100 blur-0"
     }`}
-                width="100"
-                height="100"
-                src="https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fpaloma-clearbg.png?alt=media&token=8bcd4a7d-c403-43a6-b65e-27d2ce1d2b43"
-                alt="Logo paloma"
-              />
-            </Link>
+              width="100"
+              height="100"
+              src="https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fpaloma-clearbg.png?alt=media&token=8bcd4a7d-c403-43a6-b65e-27d2ce1d2b43"
+              alt="Logo paloma"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -135,10 +152,10 @@ export default function Navbar() {
                 // className="flex items-center space-x-2 text-gray-600 hover:text-gray-900"
 
                 className={`flex items-center space-x-2   ${
-               isScrolled
-                 ? "text-[#21739e] hover:text-[#6dc0ea] before:bg-[#21739e] after:bg-[#21739e]"
-                 : "text-[#6dc0ea] hover:text-[#21739e] before:bg-[#6dc0ea] after:bg-[#6dc0ea]"
-             } `}
+                  isScrolled
+                    ? "text-[#21739e] hover:text-[#6dc0ea] before:bg-[#21739e] after:bg-[#21739e]"
+                    : "text-[#6dc0ea] hover:text-[#21739e] before:bg-[#6dc0ea] after:bg-[#6dc0ea]"
+                } `}
               >
                 <Globe size={20} />
                 <span>{i18n.language.toUpperCase()}</span>

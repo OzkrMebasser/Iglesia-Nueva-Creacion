@@ -32,7 +32,10 @@
     "weekly-schedule": {
       "title": "Programa Semanal"
     },
-  
+    "our-location": {
+      "title": "Nuestra Ubicación"
+    },
+
     "schedule": {
       "title": "Horario Semanal",
       "sunday": {
@@ -203,14 +206,29 @@
     }
   },
   "footer": {
-    "address": "123 Calle Principal, Ciudad, Estado 12345",
+    "our-info": "Información de Contacto",
+    "address-title": "Dirección",
+    "phone-title": "Teléfono",
+    "email-title": "Correo",
+    "address": "Km 200, Carret. Transp. al Sur, Fracc. Divina Providencia, C.P. 23088, La Paz, B.C.S.",
     "phone": "(555) 123-4567",
     "email": "info@gracechurch.com",
-    "service_times": "Horarios de Servicio",
-    "sunday_service": "Domingo: 10:00 AM",
-    "wednesday_service": "Miércoles: 7:00 PM",
-    "youth_service": "Jóvenes (Viernes): 6:30 PM",
-    "follow_us": "Síguenos",
-    "rights": "Todos los derechos reservados"
+    "service-times": "Horarios de Servicio",
+    "sunday-service-title": "Servicio General",
+    "sunday-service": "Domingo: 10:00 AM",
+
+    "tuesday-service-title": "Reunión de Oración",
+    "tuesday-service": "Martes: 7:00 PM",
+
+    "thursday-service-title": "Estudio Bíblico",
+    "thursday-service": "Jueves: 7:00 PM",
+
+    "saturday-service-title": "Reunión de Jóvenes",
+    "youth-service": "Sabado : 5:00 PM",
+
+    "follow-us": "Síguenos",
+    "rights": "Todos los derechos reservados",
+    "made-with": "Hecho con  ",
+    "made-by": " por Ozkr Mebasser"
   }
 }

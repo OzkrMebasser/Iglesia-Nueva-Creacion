@@ -46,7 +46,7 @@ export default function ServicesCards() {
   return (
     <div className="relative bg-black px-4 sm:px-6 lg:px-8 pb-16">
       {/* Fondo invertido */}
-      <div className="absolute inset-0 bg-pattern bg-cover bg-center bg-no-repeat lg:scale-y-[-1]"></div>
+      <div className="absolute inset-0 bg-pattern bg-cover bg-center bg-no-repeat bg-pattern lg:scale-y-[-1]"></div>
 
       {/* Contenido con z-index para que no se invierta */}
       <div className="relative z-10">
@@ -54,11 +54,20 @@ export default function ServicesCards() {
           title={t("home.weekly-schedule.title")}
           fontColor="primary-blue-text"
           bgColor="bg-[black]"
-          borderSides="border-[#7c7b7b7e]"
+          borderSides="border-[#6dc0ea]"
+          tagName="h1"
+          pY="py-16"
+          shadow="shadow-[1px_2px_44px_-9px_#6dc0ea]
+"
         />
+
         <div className="flex flex-col md:flex-row">
           {/* Swiper con las tarjetas */}
-          <div id="services-cards" className={`${scrolled ? "rotate-in-center" : ""} w-full md:w-1/2`}>
+          <div
+            id="services-cards"
+            data-aos="zoom-in-up"
+            className=" w-full md:w-1/2"
+          >
             <Swiper
               effect={"cards"}
               grabCursor={true}
@@ -69,9 +78,9 @@ export default function ServicesCards() {
               {schedule.map(({ key, icon: Icon }, index) => (
                 <SwiperSlide key={key}>
                   <div className="border border-[gray] h-[355px] rounded-lg group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-8 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:rounded-lg sm:px-6">
-                    <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-[#21739e] transition-all duration-300 group-hover:scale-[10]"></span>
+                    <span className="absolute top-10 z-0 h-20 w-20 rounded-[30%] bg-[#21739e] transition-all duration-300 group-hover:scale-[10]"></span>
                     <div className="relative z-10 mx-auto max-w-md">
-                      <span className="grid h-20 w-20 place-items-center rounded-full bg-[#000000] transition-all duration-300 group-hover:bg-[#ffffff]">
+                      <span className="grid h-20 w-20 place-items-center rounded-[30%] bg-[#000000] transition-all duration-300 group-hover:bg-[#ffffff]">
                         <Icon className="h-10 w-10 primary-blue-text group-hover:text-[#000000] transition-all" />
                       </span>
                       <div className="space-y-3 pt-5 text-center text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
@@ -81,7 +90,9 @@ export default function ServicesCards() {
                         <p className="font-semibold text-lg">
                           {t(`home.schedule.${key}.day`)}
                         </p>
-                        <p className=" mb-2">{t(`home.schedule.${key}.time`)}</p>
+                        <p className=" mb-2">
+                          {t(`home.schedule.${key}.time`)}
+                        </p>
                       </div>
                     </div>
                     <span className="absolute bottom-8 left-1/2 transform -translate-x-1/2">

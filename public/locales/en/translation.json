@@ -29,8 +29,12 @@
     "weekly-schedule": {
       "title": "Weekly Schedule"
     },
+
     "schedule-desc": {
       "description": "Discover a space for faith, fellowship, and spiritual growth throughout the week. From moments of worship and biblical teaching to prayer meetings and youth gatherings, each gathering is designed to strengthen your relationship with God and the community. We invite you to join us and share in God's presence!"
+    },
+    "our-location": {
+      "title": "Our Location"
     },
     "schedule": {
       "title": "Weekly Schedule",
@@ -201,15 +205,29 @@
       "submit": "Send Message"
     }
   },
-  "footer": {
-    "address": "123 Main Street, City, State 12345",
-    "phone": "(555) 123-4567",
-    "email": "info@gracechurch.com",
-    "service_times": "Service Times",
-    "sunday_service": "Sunday: 10:00 AM",
-    "wednesday_service": "Wednesday: 7:00 PM",
-    "youth_service": "Youth (Friday): 6:30 PM",
-    "follow_us": "Follow Us",
-    "rights": "All rights reserved"
-  }
+ "footer": {
+  "our-info": "Contact Information",
+  "address-title": "Address",
+  "phone-title": "Phone",
+  "email-title": "Email",
+  "address": "Km 200, Transpeninsular Hwy South, Fracc. Divina Providencia, Zip Code 23088, La Paz, B.C.S.",
+  "phone": "(555) 123-4567",
+  "email": "info@gracechurch.com",
+  "service-times": "Service Times",
+  "sunday-service-title": "General Service",
+  "sunday-service": "Sunday: 10:00 AM",
+  "tuesday-service-title": "Prayer Meeting",
+  "tuesday-service": "Tuesday: 7:00 PM",
+  "thursday-service-title": "Bible Study",
+  "thursday-service": "Thursday: 7:00 PM",
+  "saturday-service-title": "Youth Meeting",
+  "youth-service": "Saturday: 5:00 PM",
+  "follow-us": "Follow Us",
+  "rights": "All rights reserved",
+  "made-with": "Made with ",
+  "made-by": " by Ozkr Mebasser"
+
+
+}
+
 }
