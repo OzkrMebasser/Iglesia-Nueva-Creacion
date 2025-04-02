@@ -32,7 +32,7 @@ const Title = ({
         </h1>
       ) : (
         <h2
-          className={`${fontColor} ${bgColor}  border-2 rounded-lg ${borderSides}  border-b-[#21739e]  text-xl lg:text-2xl font-black  w-auto inline-block py-3 px-2  `}
+          className={` ${shadow} ${fontColor} ${bgColor}  border-2 rounded-lg ${borderSides}  border-b-[#21739e]  text-xl lg:text-2xl font-black  w-auto inline-block py-3 px-2  `}
         >
           {title}
         </h2>

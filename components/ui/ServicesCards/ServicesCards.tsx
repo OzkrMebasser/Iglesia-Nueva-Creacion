@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect } from "react";
 import { FaChurch, FaPrayingHands, FaBookOpen, FaUsers } from "react-icons/fa";
 import { MdSwipe } from "react-icons/md";

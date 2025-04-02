@@ -23,6 +23,7 @@ const ServicesDays = () => {
           borderSides="border-[#7c7b7b7e]"
           tagName="h1"
           pY="py-16"
+          shadow="shadow-[1px_2px_44px_-9px_#6dc0ea]"
         />
         {/* Weekly Schedule */}
 
