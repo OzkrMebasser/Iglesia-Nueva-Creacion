@@ -1,10 +1,17 @@
-
+"use client"
 import AboutClient from './AboutClient';
-import data from '@/public/data/images.json';
+// import data from '@/public/data/images.json';
 
+import { useEffect, useState } from 'react';
 
 export default function AboutPage() {
-  return <AboutClient serverImages={data.images} />;
-}
+  const [images, setImages] = useState([]);
 
-const dynamic = 'force-dynamic'; 
+  useEffect(() => {
+    fetch('/data/images.json')
+      .then((res) => res.json())
+      .then((data) => setImages(data.images));
+  }, []);
+
+  return <AboutClient serverImages={images} />;
+}

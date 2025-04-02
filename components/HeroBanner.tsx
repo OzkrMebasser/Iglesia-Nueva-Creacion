@@ -55,7 +55,7 @@ const HeroBanner = () => {
                   className="text-3xl mt-0 lg:text-5xl font-black text-white [text-shadow:_2px_3px_9px_#000000] lg:text-shadow-none"
                 />
               </h1>
-              <p
+              <div
                 className=" lg:mt-6 text-[1.2rem] lg:text-4xl font-black  "
                 data-aos="fade-down"
                 data-aos-delay="600"
@@ -86,7 +86,7 @@ const HeroBanner = () => {
                     rotationInterval={2000}
                   />
                 </span>
-              </p>
+              </div>
 
               <div className="relative inline-block mt-6" data-aos="fade-up">
                 <button className="group relative font-inherit text-[1rem] px-[1rem] lg:px-[2.75rem] py-[0.625rem] tracking-[0.06em] rounded-[0.625rem] overflow-hidden transition-all duration-300 border-2 border-[#white] bg-gradient-to-r from-[rgba(109,192,234,0.1)] via-transparent to-[rgba(109,192,234,0.1)] text-[#6dc0ea] shadow-[inset_0_0_10px_rgba(109,192,234,0.4),0_0_9px_3px_rgba(109,192,234,0.1)] hover:text-[#b3e3ff] hover:shadow-[inset_0_0_10px_rgba(109,192,234,0.6),0_0_9px_3px_rgba(109,192,234,0.2)] sm:bg-[rgba(109,192,234,0.3)]">
