@@ -62,6 +62,10 @@
         "time": "5:00 PM",
         "description": "Un espacio para que los jóvenes crezcan en su fe y compartan juntos"
       }
+    },
+    "ourLocationVideo": {
+      "title": " Mira como llegar a la iglesia"
+      
     }
   },
   "about": {
@@ -74,20 +78,21 @@
       "title": "Nuestra Visión",
       "description": "Ser una comunidad vibrante y centrada en Cristo que transforma vidas e impacta nuestra ciudad con el Evangelio."
     },
+    
     "values": {
-      "title": "Nuestros Valores Fundamentales",
-      "faith": {
-        "title": "Fe Bíblica",
-        "description": "Fundamentados en las Escrituras y comprometidos con la sana doctrina"
-      },
-      "community": {
-        "title": "Comunidad Auténtica",
-        "description": "Construyendo relaciones significativas y apoyándonos mutuamente"
-      },
-      "service": {
-        "title": "Liderazgo Servidor",
-        "description": "Siguiendo el ejemplo de Cristo en servir a otros con humildad"
-      }
+      "title": "Nuestros Valores Fundamentales"
+    },
+    "faith": {
+      "title": "Fe Bíblica",
+      "description": "Fundamentados en las Escrituras y comprometidos con la sana doctrina"
+    },
+    "community": {
+      "title": "Comunidad Auténtica",
+      "description": "Construyendo relaciones significativas y apoyándonos mutuamente"
+    },
+    "service": {
+      "title": "Liderazgo Servidor",
+      "description": "Siguiendo el ejemplo de Cristo en servir a otros con humildad"
     },
     "leadership": {
       "title": "Nuestro Equipo de Liderazgo",

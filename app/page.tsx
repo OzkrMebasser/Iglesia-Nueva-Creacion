@@ -10,10 +10,7 @@ import "aos/dist/aos.css";
 import ServicesCards from "@/components/ui/ServicesCards/ServicesCards";
 // import Title from "@/components/ui/Title";
 import MapComponent from "@/components/MapComponent";
-import FeaturedSections from "@/components/FeaturedSections";
-
-
-
+import FeaturedSections from "@/components/FeaturedHomeSection";
 
 // export function AnimatedTestimonialsDemo() {
 //   const testimonials = [
@@ -72,19 +69,16 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <>
       {/* Hero Section */}
       <HeroBanner />
-
       {/* Featured Sections */}
       <FeaturedSections />
-  
       {/* Weekly Schedule */}
       {/* <ServicesDays /> */}
-  
       <ServicesCards />
       {/* Map */}
       <MapComponent />
-    </div>
+    </>
   );
 }

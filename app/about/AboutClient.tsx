@@ -3,14 +3,41 @@ import { useEffect } from "react";
 import GridMotion from "@/components/ui/GridMotion";
 // import { AnimatedTestimonials } from "@/components/ui/AnimatedTestimonials";
 import BlurText from "@/components/ui/BlurText";
+import Featured from "@/components/Featured";
 import { useTranslation } from "react-i18next";
 
 import Image from "next/image";
 import Title from "@/components/ui/Title";
+import FeaturedSections from "@/components/FeaturedHomeSection";
 
 interface AboutClientProps {
   serverImages: string[];
 }
+
+interface FeaturedSection {
+  altImage: string;
+  image: string;
+}
+
+const featuredSections: FeaturedSection[] = [
+
+  ///*** FALTA CAMBIAR LAS IMANGESN DE ESTA SECCION */
+  {
+    altImage: "faith",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fabout-section%2Ffe-biblica.png?alt=media&token=d9ebdbe0-66d7-459a-bb34-35e7cc734bbf",
+  },
+  {
+    altImage: "community",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fabout-section%2Fcomunidad-autentica.png?alt=media&token=32e82dae-0c92-4ef5-b922-cc6f516c80c3",
+  },
+  {
+    altImage: "service",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fabout-section%2Fliderazgo-servidor.png?alt=media&token=affe4a88-77b1-435a-946f-6348d0543cba",
+  },
+];
 
 // const testimonials = [
 //   {
@@ -65,7 +92,7 @@ export default function AboutClient({ serverImages }: AboutClientProps) {
 
   return (
     <div className="w-full mx-auto py-16">
-      <div className="relative h-[80vh] mb-16">
+      <div className="relative h-auto">
         <GridMotion items={items} />
 
         <div className="absolute inset-0 bg-[black] bg-opacity-30 rounded-lg flex items-center justify-center z-10">
@@ -88,7 +115,7 @@ export default function AboutClient({ serverImages }: AboutClientProps) {
         {/* <AnimatedTestimonials testimonials={testimonials}/> */}
 
         {/* Mission and Vision */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8 ">
           <div className="px-4 md:px-6 lg:px-8 py-6">
             <Title
               title={t("about.mission.title")}
@@ -115,17 +142,31 @@ export default function AboutClient({ serverImages }: AboutClientProps) {
               shadow="shadow-[1px_2px_44px_-9px_#6dc0ea]"
             />
             <p className="text-xl font-bold primary-blue-text text-justify bg-[black] lg:p-6leading-relaxed">
-            {t("about.vision.description")}
+              {t("about.vision.description")}
             </p>
           </div>
         </div>
 
         {/* Values */}
-        <div className="px-4 md:px-6 lg:px-8 mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">
+        <div className="px-4 md:px-6 lg:px-8 ">
+          {/* <h2 className="text-3xl font-bold mb-8 text-center">
             {t("about.values.title")}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          </h2> */}
+          <Title
+            title={t("about.values.title")}
+            fontColor="primary-blue-text"
+            bgColor="bg-[black]"
+            borderSides="border-[#6dc0ea]"
+            tagName="h1"
+            pY="py-8"
+            shadow="shadow-[1px_2px_44px_-9px_#6dc0ea]"
+          />
+         <Featured
+        t={t}
+        featuredSections={featuredSections}
+        translationKeyPrefix="about"
+      />
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {["faith", "community", "service"].map((value) => (
               <div
                 key={value}
@@ -139,11 +180,11 @@ export default function AboutClient({ serverImages }: AboutClientProps) {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Leadership */}
-        <div className="px-4 md:px-6 lg:px-8 mb-16">
+        {/* <div className="px-4 md:px-6 lg:px-8 mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">
             {t("about.leadership.title")}
           </h2>
@@ -173,7 +214,7 @@ export default function AboutClient({ serverImages }: AboutClientProps) {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

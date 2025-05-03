@@ -17,7 +17,7 @@ const GridMotion: FC<GridMotionProps> = ({
   const totalItems = 28;
   const defaultItems = Array.from(
     { length: totalItems },
-    (_, index) => `Item ${index + 1}`
+    (_, index) => ``
   );
   const combinedItems =
     items.length > 0 ? items.slice(0, totalItems) : defaultItems;
@@ -75,7 +75,7 @@ const GridMotion: FC<GridMotionProps> = ({
                 const content = combinedItems[rowIndex * 7 + itemIndex];
                 return (
                   <div key={itemIndex} className="relative">
-                    <div className="relative w-full h-full overflow-hidden rounded-[10px] bg-[#111] flex items-center justify-center text-white text-[1.5rem]">
+                    <div className="relative w-full h-full overflow-hidden rounded-[10px] bg-[#11111169] flex items-center justify-center text-white text-[1.5rem]">
                       {typeof content === "string" &&
                       content.startsWith("http") ? (
                         <div

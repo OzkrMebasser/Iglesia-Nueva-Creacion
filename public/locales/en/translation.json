@@ -62,6 +62,9 @@
         "time": "5:00 PM",
         "description": "A space for young people to grow in faith and fellowship"
       }
+    },
+    "ourLocationVideo": {
+      "title": "See how to get to the church"
     }
   },
   "about": {
@@ -75,19 +78,19 @@
       "description": "To be a vibrant, Christ-centered community that transforms lives and impacts our city with the Gospel."
     },
     "values": {
-      "title": "Our Core Values",
-      "faith": {
-        "title": "Biblical Faith",
-        "description": "Grounded in Scripture and committed to sound doctrine"
-      },
-      "community": {
-        "title": "Authentic Community",
-        "description": "Building meaningful relationships and supporting one another"
-      },
-      "service": {
-        "title": "Servant Leadership",
-        "description": "Following Christ's example in serving others with humility"
-      }
+      "title": "Our Core Values"
+    },
+    "faith": {
+      "title": "Biblical Faith",
+      "description": "Grounded in Scripture and committed to sound doctrine"
+    },
+    "community": {
+      "title": "Authentic Community",
+      "description": "Building meaningful relationships and supporting one another"
+    },
+    "service": {
+      "title": "Servant Leadership",
+      "description": "Following Christ's example in serving others with humility"
     },
     "leadership": {
       "title": "Our Leadership Team",
@@ -205,29 +208,26 @@
       "submit": "Send Message"
     }
   },
- "footer": {
-  "our-info": "Contact Information",
-  "address-title": "Address",
-  "phone-title": "Phone",
-  "email-title": "Email",
-  "address": "Km 200, Transpeninsular Hwy South, Fracc. Divina Providencia, Zip Code 23088, La Paz, B.C.S.",
-  "phone": "(555) 123-4567",
-  "email": "info@gracechurch.com",
-  "service-times": "Service Times",
-  "sunday-service-title": "General Service",
-  "sunday-service": "Sunday: 10:00 AM",
-  "tuesday-service-title": "Prayer Meeting",
-  "tuesday-service": "Tuesday: 7:00 PM",
-  "thursday-service-title": "Bible Study",
-  "thursday-service": "Thursday: 7:00 PM",
-  "saturday-service-title": "Youth Meeting",
-  "youth-service": "Saturday: 5:00 PM",
-  "follow-us": "Follow Us",
-  "rights": "All rights reserved",
-  "made-with": "Made with ",
-  "made-by": " by Ozkr Mebasser"
-
-
-}
-
+  "footer": {
+    "our-info": "Contact Information",
+    "address-title": "Address",
+    "phone-title": "Phone",
+    "email-title": "Email",
+    "address": "Km 200, Transpeninsular Hwy South, Fracc. Divina Providencia, Zip Code 23088, La Paz, B.C.S.",
+    "phone": "(555) 123-4567",
+    "email": "info@gracechurch.com",
+    "service-times": "Service Times",
+    "sunday-service-title": "General Service",
+    "sunday-service": "Sunday: 10:00 AM",
+    "tuesday-service-title": "Prayer Meeting",
+    "tuesday-service": "Tuesday: 7:00 PM",
+    "thursday-service-title": "Bible Study",
+    "thursday-service": "Thursday: 7:00 PM",
+    "saturday-service-title": "Youth Meeting",
+    "youth-service": "Saturday: 5:00 PM",
+    "follow-us": "Follow Us",
+    "rights": "All rights reserved",
+    "made-with": "Made with ",
+    "made-by": " by Ozkr Mebasser"
+  }
 }
