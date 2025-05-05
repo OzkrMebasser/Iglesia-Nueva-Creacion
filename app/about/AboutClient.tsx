@@ -1,14 +1,12 @@
 "use client";
 import { useEffect } from "react";
 import GridMotion from "@/components/ui/GridMotion";
-// import { AnimatedTestimonials } from "@/components/ui/AnimatedTestimonials";
+import { AnimatedMinistries } from "@/components/ui/AnimatedMinistries";
 import BlurText from "@/components/ui/BlurText";
 import Featured from "@/components/Featured";
 import { useTranslation } from "react-i18next";
 
-import Image from "next/image";
 import Title from "@/components/ui/Title";
-import FeaturedSections from "@/components/FeaturedHomeSection";
 
 interface AboutClientProps {
   serverImages: string[];
@@ -20,8 +18,6 @@ interface FeaturedSection {
 }
 
 const featuredSections: FeaturedSection[] = [
-
-  ///*** FALTA CAMBIAR LAS IMANGESN DE ESTA SECCION */
   {
     altImage: "faith",
     image:
@@ -39,47 +35,54 @@ const featuredSections: FeaturedSection[] = [
   },
 ];
 
-// const testimonials = [
-//   {
-//     quote:
-//       "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-//     name: "Sarah Chen",
-//     designation: "Product Manager at TechFlow",
-//     src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//   },
-//   {
-//     quote:
-//       "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-//     name: "Michael Rodriguez",
-//     designation: "CTO at InnovateSphere",
-//     src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//   },
-//   {
-//     quote:
-//       "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-//     name: "Emily Watson",
-//     designation: "Operations Director at CloudScale",
-//     src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//   },
-//   {
-//     quote:
-//       "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-//     name: "James Kim",
-//     designation: "Engineering Lead at DataPro",
-//     src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//   },
-//   {
-//     quote:
-//       "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-//     name: "Lisa Thompson",
-//     designation: "VP of Technology at FutureNet",
-//     src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//   },
-// ];
 export default function AboutClient({ serverImages }: AboutClientProps) {
   const { t } = useTranslation();
 
   const items = serverImages;
+  const ministries = [
+    {
+      quote: `${t("about.ourMinistries.pastors.quote")}`,
+      name: `${t("about.ourMinistries.pastors.name")}`,
+      designation: `${t("about.ourMinistries.pastors.designation")}`,
+      src: "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fabout-section%2Fministerios%2FPastores.jpeg?alt=media&token=9249c93d-8711-4444-8deb-34752c0f1059",
+    },
+    {
+      quote: `${t("about.ourMinistries.worshipTeam.quote")}`,
+      name: `${t("about.ourMinistries.worshipTeam.name")}`,
+      designation: `${t("about.ourMinistries.worshipTeam.designation")}`,
+      src: "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fabout-section%2Fministerios%2Falabanza.jpg?alt=media&token=e422d14a-3a42-4e16-a2a1-6fb912f969a0",
+    },
+    {
+      quote: `${t("about.ourMinistries.womenMinistry.quote")}`,
+      name: `${t("about.ourMinistries.womenMinistry.name")}`,
+      designation: `${t("about.ourMinistries.womenMinistry.designation")}`,
+      src: "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fabout-section%2Fministerios%2Fmujeres-2.jpeg?alt=media&token=fed05f69-c409-4fb7-b39f-2d0d42745e17",
+    },
+    {
+      quote: `${t("about.ourMinistries.menMinistry.quote")}`,
+      name: `${t("about.ourMinistries.menMinistry.name")}`,
+      designation: `${t("about.ourMinistries.menMinistry.designation")}`,
+      src: "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fabout-section%2Fministerios%2Fvarones-ai.webp?alt=media&token=f9c31054-ac51-49e1-9f8b-2e6b67b6814f",
+    },
+    {
+      quote: `${t("about.ourMinistries.danceMinistry.quote")}`,
+      name: `${t("about.ourMinistries.danceMinistry.name")}`,
+      designation: `${t("about.ourMinistries.danceMinistry.designation")}`,
+      src: "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fabout-section%2Fministerios%2Fdanza.jpg?alt=media&token=c4c58cc6-5803-47d2-a7b5-8216712fc6f4",
+    },
+    {
+      quote: `${t("about.ourMinistries.youthMinistry.quote")}`,
+      name: `${t("about.ourMinistries.youthMinistry.name")}`,
+      designation: `${t("about.ourMinistries.youthMinistry.designation")}`,
+      src: "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fabout-section%2Fministerios%2Fjovenes.jpeg?alt=media&token=4522c84f-335d-4c79-9c48-9c5926145158",
+    },
+    {
+      quote: `${t("about.ourMinistries.chaplainsMinistry.quote")}`,
+      name: `${t("about.ourMinistries.chaplainsMinistry.name")}`,
+      designation: `${t("about.ourMinistries.chaplainsMinistry.designation")}`,
+      src: "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fabout-section%2Fministerios%2Fcapellania.jpeg?alt=media&token=b8d98ba6-aeb3-43e4-ae95-12f6c55e2161",
+    },
+  ];
 
   useEffect(() => {
     const AOS = require("aos");
@@ -112,8 +115,6 @@ export default function AboutClient({ serverImages }: AboutClientProps) {
       {/* Mission and Vision */}
 
       <div className="bg-cover bg-center bg-no-repeat bg-pattern bg-black">
-        {/* <AnimatedTestimonials testimonials={testimonials}/> */}
-
         {/* Mission and Vision */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8 ">
           <div className="px-4 md:px-6 lg:px-8 py-6">
@@ -161,60 +162,30 @@ export default function AboutClient({ serverImages }: AboutClientProps) {
             pY="py-8"
             shadow="shadow-[1px_2px_44px_-9px_#6dc0ea]"
           />
-         <Featured
-        t={t}
-        featuredSections={featuredSections}
-        translationKeyPrefix="about"
-      />
-          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {["faith", "community", "service"].map((value) => (
-              <div
-                key={value}
-                className="bg-white p-6 rounded-lg shadow-md text-center"
-              >
-                <h3 className="text-xl font-bold mb-4">
-                  {t(`about.values.${value}.title`)}
-                </h3>
-                <p className="text-gray-600">
-                  {t(`about.values.${value}.description`)}
-                </p>
-              </div>
-            ))}
-          </div> */}
+          <section className="pt-6">
+            <Featured
+              t={t}
+              featuredSections={featuredSections}
+              translationKeyPrefix="about"
+            />
+          </section>
         </div>
 
-        {/* Leadership */}
-        {/* <div className="px-4 md:px-6 lg:px-8 mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            {t("about.leadership.title")}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {["pastor", "elder1", "elder2"].map((leader) => (
-              <div
-                key={leader}
-                className="bg-white p-6 rounded-lg shadow-md text-center"
-              >
-                <div className="relative w-32 h-32 mx-auto mb-4">
-                  <Image
-                    src={t(`about.leadership.${leader}.image`)}
-                    alt={t(`about.leadership.${leader}.name`)}
-                    fill
-                    className="object-cover rounded-full"
-                  />
-                </div>
-                <h3 className="text-xl font-bold mb-2">
-                  {t(`about.leadership.${leader}.name`)}
-                </h3>
-                <p className="text-gray-600 mb-2">
-                  {t(`about.leadership.${leader}.role`)}
-                </p>
-                <p className="text-gray-600">
-                  {t(`about.leadership.${leader}.description`)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div> */}
+        {/* Ministries */}
+        <div className="px-4 md:px-6 lg:px-8 py-8">
+          <Title
+            title={t("about.ourMinistries.title")}
+            fontColor="primary-blue-text"
+            bgColor="bg-[black]"
+            borderSides="border-[#6dc0ea]"
+            tagName="h1"
+            pY=""
+            shadow="shadow-[1px_2px_44px_-9px_#6dc0ea]"
+          />
+          <section className="pt-6">
+            <AnimatedMinistries ministries={ministries} t={t} />
+          </section>
+        </div>
       </div>
     </div>
   );

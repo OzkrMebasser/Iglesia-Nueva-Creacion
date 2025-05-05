@@ -92,27 +92,47 @@
       "title": "Servant Leadership",
       "description": "Following Christ's example in serving others with humility"
     },
-    "leadership": {
-      "title": "Our Leadership Team",
-      "pastor": {
-        "name": "Pastor John Smith",
-        "role": "Senior Pastor",
-        "description": "Serving our church family for over 15 years",
-        "image": "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c"
+
+    "ourMinistries": {
+      "title": "Our Ministries",
+
+      "pastors": {
+        "quote": "Héctor and Maribel Sánchez lead with compassion and purpose, inspiring others to grow in faith and live with hope through their example.",
+        "name": "Héctor and Maribel Sánchez",
+        "designation": "Lead Pastors"
       },
-      "elder1": {
-        "name": "David Johnson",
-        "role": "Elder",
-        "description": "Leading our community outreach initiatives",
-        "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7"
+      "worshipTeam": {
+        "quote": "The Worship Ministry passionately guides the congregation in genuine worship, creating an environment where the presence of God transforms lives.",
+        "name": "Worship",
+        "designation": "Worship Ministry"
       },
-      "elder2": {
-        "name": "Michael Brown",
-        "role": "Elder",
-        "description": "Overseeing discipleship and small groups",
-        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+      "womenMinistry": {
+        "quote": "The Women's Ministry strengthens each woman in her identity in Christ, providing support, prayer, and spiritual growth in unity.",
+        "name": "Women",
+        "designation": "Women's Ministry"
+      },
+      "menMinistry": {
+        "quote": "The Men's Ministry raises up men of integrity, firm in faith and committed to their families, church, and purpose in God.",
+        "name": "Men",
+        "designation": "Men's Ministry"
+      },
+      "danceMinistry": {
+        "quote": "Through art and body expression, the Dance Ministry celebrates freedom in Christ, bringing a message of joy and spiritual surrender.",
+        "name": "Dance",
+        "designation": "Dance Ministry"
+      },
+      "youthMinistry": {
+        "quote": "The Youth Ministry encourages the new generations to live an authentic faith, developing leaders passionate for God and His Word.",
+        "name": "Youth",
+        "designation": "Youth Ministry"
+      },
+      "chaplainsMinistry": {
+        "quote": "The Chaplaincy Ministry provides spiritual support in times of need, offering comfort, hope, and love to every touched life.",
+        "name": "Chaplains",
+        "designation": "Chaplains Ministry"
       }
     }
+ 
   },
   "services": {
     "title": "Our Services & Ministries",

@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
+import ReactCountryFlag from "react-country-flag";
+
 import Image from "next/image";
 
 import { Dancing_Script } from "next/font/google";
@@ -82,11 +84,11 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <span
-              className={`bg-[#000000] p-2 rounded-full mr-2 shadow-[inset_1px_2px_44px_-9px_#6dc0ea]  ${
-      isImageHidden
-        ? "transition-all duration-1000 ease-in-out blur-0"
-        : "hidden blur-md"
-    }` }
+              className={`bg-[#000000] p-2 rounded-full mr-2   ${
+                isImageHidden
+                  ? "transition-all duration-1000 ease-in-out blur-0"
+                  : "hidden blur-md"
+              }`}
             >
               <Image
                 className="h-8 w-8 inline  scale-x-100 transition-all duration-1000 ease-in-out "
@@ -104,18 +106,21 @@ export default function Navbar() {
             >
               {t("church.name")}
             </Link>
-            <Image
-              className={`h-8 w-8 inline ml-2 -scale-x-100 transition-all duration-1000 ease-in-out 
-    ${
-      isImageHidden
-        ? "-translate-x-32 opacity-0 scale-50 blur-md"
-        : "translate-x-0 opacity-100 scale-100 blur-0"
-    }`}
-              width="100"
-              height="100"
-              src="https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fpaloma-clearbg.png?alt=media&token=8bcd4a7d-c403-43a6-b65e-27d2ce1d2b43"
-              alt="Logo paloma"
-            />
+            <span
+              className={`shadow-[inset_1px_2px_44px_0px_#6dc0ea] rounded-full p-2  ml-2 ${
+                isImageHidden
+                  ? "-translate-x-32 opacity-0 scale-50 blur-md"
+                  : "translate-x-0 opacity-100 scale-100 blur-0 "
+              }`}
+            >
+              <Image
+                width="100"
+                height="100"
+                className="h-8 w-8 inline -scale-x-100 transition-all duration-1000 ease-in-out "
+                src="https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fpaloma-clearbg.png?alt=media&token=8bcd4a7d-c403-43a6-b65e-27d2ce1d2b43"
+                alt="Logo paloma"
+              />
+            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -165,14 +170,24 @@ export default function Navbar() {
                 <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                   <button
                     onClick={() => toggleLanguage("en")}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#21739e] hover:text-white w-full text-left"
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-[#21739e] hover:text-white w-full text-left"
                   >
+                    <ReactCountryFlag
+                      countryCode="US"
+                      svg
+                      style={{ width: "1.5em", height: "1.5em" }}
+                    />
                     English
                   </button>
                   <button
                     onClick={() => toggleLanguage("es")}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#21739e] hover:text-white w-full text-left"
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-[#21739e] hover:text-white w-full text-left"
                   >
+                    <ReactCountryFlag
+                      countryCode="MX"
+                      svg
+                      style={{ width: "1.5em", height: "1.5em" }}
+                    />
                     Español
                   </button>
                 </div>
@@ -184,7 +199,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-gray-900"
+              className="text-[#21739e]  hover:text-[#6dc0ea]"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -199,23 +214,56 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="block px-3 py-2 text-gray-600 hover:text-gray-900"
+              className={cn(
+                "block px-3 py-2 rounded-md transition-all duration-300",
+                pathname === link.href ? "font-bold" : "",
+                isScrolled
+                  ? "text-[#21739e] hover:bg-[#6dc0ea] hover:text-white"
+                  : "text-[#6dc0ea] hover:bg-[#21739e] hover:text-white"
+              )}
               onClick={() => setIsOpen(false)}
             >
               {link.label}
             </Link>
           ))}
+
           <div className="px-3 py-2">
             <button
-              onClick={() => toggleLanguage("en")}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900"
+              onClick={() => {
+                toggleLanguage("en");
+                setIsOpen(false);
+              }}
+              className={cn(
+                "flex items-center gap-2 w-full text-left px-3 py-2 rounded-md transition-all duration-300",
+                isScrolled
+                  ? "text-[#21739e] hover:bg-[#6dc0ea] hover:text-white"
+                  : "text-[#6dc0ea] hover:bg-[#21739e] hover:text-white"
+              )}
             >
+              <ReactCountryFlag
+                countryCode="US"
+                svg
+                style={{ width: "1.5em", height: "1.5em" }}
+              />
               English
             </button>
             <button
-              onClick={() => toggleLanguage("es")}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900"
+              onClick={() => {
+                toggleLanguage("es");
+                setIsOpen(false);
+              }}
+              className={cn(
+                "flex items-center gap-2 w-full text-left px-3 py-2 rounded-md transition-all duration-300",
+                isScrolled
+                  ? "text-[#21739e] hover:bg-[#6dc0ea] hover:text-white"
+                  : "text-[#6dc0ea] hover:bg-[#21739e] hover:text-white"
+              )}
             >
+              <ReactCountryFlag
+                countryCode="MX"
+                svg
+                style={{ width: "1.5em", height: "1.5em" }}
+              />
               Español
             </button>
           </div>

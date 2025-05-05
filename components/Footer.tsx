@@ -4,9 +4,8 @@ import { useTranslation } from "react-i18next";
 import { Instagram, Youtube, MapPin, Phone, Mail, Church } from "lucide-react";
 import { LiaPrayingHandsSolid, LiaBibleSolid } from "react-icons/lia";
 import { GrGroup } from "react-icons/gr";
-import { FiFacebook, FiInstagram  } from "react-icons/fi";
+import { FiFacebook, FiInstagram } from "react-icons/fi";
 import { IoLogoInstagram } from "react-icons/io5";
-
 
 export default function Footer() {
   const { t } = useTranslation();

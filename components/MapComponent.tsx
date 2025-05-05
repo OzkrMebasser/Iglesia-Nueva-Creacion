@@ -1,13 +1,20 @@
 "use client";
+import { useState } from "react";
 import Title from "./ui/Title";
 import { useTranslation } from "react-i18next";
-import { PiVideoFill } from "react-icons/pi";
+import { PiVideoFill,PiX } from "react-icons/pi";
 
 const Map = () => {
   const { t } = useTranslation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <>
-      <div className=" mx-auto bg-black  pb-16 bg-pattern bg-cover bg-center bg-no-repeat ">
+      <div className="mx-auto bg-black pb-16 bg-pattern bg-cover bg-center bg-no-repeat">
         <Title
           title={t("home.our-location.title")}
           fontColor="primary-blue-text"
@@ -19,11 +26,9 @@ const Map = () => {
         />
         <div className="px-4 md:px-6 lg:px-8 mb-6">
           <div className="text-xl mx-auto text-center font-bold bg-transparent lg:p-6">
-            <a
-              href="https://www.tiktok.com/@oscarmaarquez20/video/7494790202737577224?_r=1&_t=ZM-8vhXoMwXbIz&fbclid=IwY2xjawKA1chleHRuA2FlbQIxMQBicmlkETFTQnV2TXpzdURQRkRNbEpkAR5hX3XweAqy9KVa0ZvJLRaP8K2XxmCby8C4DUapbz1OkAf-kO39zkyLb0W17g_aem_o-5a8tZUYbzEyUXwKp4q7Q"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative inline-block text-[#6dc0ea] hover:text-[#21739e]
+            <div
+              onClick={toggleModal}
+              className="relative inline-block text-[#6dc0ea] hover:text-[#21739e] cursor-pointer
                before:content-[''] before:absolute before:bottom-0 before:left-1/2 
                before:w-0 before:h-[1px] before:bg-[#6dc0ea] hover:before:w-1/2 
                hover:before:bg-[#21739e]
@@ -33,9 +38,9 @@ const Map = () => {
                hover:after:bg-[#21739e]
                after:transition-all after:duration-700 after:ease-in-out after:origin-center"
             >
-             {t("home.ourLocationVideo.title")}{" "}
+              {t("home.ourLocationVideo.title")}{" "}
               <PiVideoFill className="h-7 w-7 ml-2 inline text-[#6dc0ea] hover:text-[#21739e]" />
-            </a>
+            </div>
           </div>
         </div>
         <iframe
@@ -46,6 +51,32 @@ const Map = () => {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div className="relative bg-white p-4 rounded-md w-[90%] max-w-xl">
+      <button
+        onClick={toggleModal}
+        title="Close modal"
+        className="absolute bottom-5 right-5 p-3 text-red-600 text-2xl font-bold z-50 bg-[#ffffff] rounded-full  hover:bg-red-100 transition duration-300 ease-in-out"
+      >
+      
+        <PiX className="h-7 w-7 inline " />
+      </button>
+      <div className="w-full aspect-video">
+        <iframe
+          className="w-full h-[400px]"
+          src="https://www.youtube-nocookie.com/embed/1KnI94wdmlg?rel=0"
+          title="Video de ubicación"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    </div>
+  </div>
+)}
+
     </>
   );
 };

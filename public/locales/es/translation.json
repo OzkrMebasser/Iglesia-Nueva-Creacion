@@ -65,7 +65,6 @@
     },
     "ourLocationVideo": {
       "title": " Mira como llegar a la iglesia"
-      
     }
   },
   "about": {
@@ -78,7 +77,7 @@
       "title": "Nuestra Visión",
       "description": "Ser una comunidad vibrante y centrada en Cristo que transforma vidas e impacta nuestra ciudad con el Evangelio."
     },
-    
+
     "values": {
       "title": "Nuestros Valores Fundamentales"
     },
@@ -94,25 +93,44 @@
       "title": "Liderazgo Servidor",
       "description": "Siguiendo el ejemplo de Cristo en servir a otros con humildad"
     },
-    "leadership": {
-      "title": "Nuestro Equipo de Liderazgo",
-      "pastor": {
-        "name": "Pastor Juan Smith",
-        "role": "Pastor Principal",
-        "description": "Sirviendo a nuestra familia de la iglesia por más de 15 años",
-        "image": "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c"
+    "ourMinistries": {
+      "title": "Nuestros Ministerios",
+
+      "pastors": {
+     
+        "quote": "Héctor y Maribel Sánchez lideran con compasión y propósito, inspirando a otros a crecer en la fe y vivir con esperanza a través de su ejemplo.",
+        "name": "Héctor y Maribel Sánchez",
+        "designation": "Pastores principales"
       },
-      "elder1": {
-        "name": "David Johnson",
-        "role": "Anciano",
-        "description": "Liderando nuestras iniciativas de alcance comunitario",
-        "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7"
+      "worshipTeam": {
+        "quote": "El Ministerio de Alabanza guía con pasión a la congregación en una adoración genuina, creando un ambiente donde la presencia de Dios transforma vidas.",
+        "name": "Alabanza",
+        "designation": "Ministerio de Alabanza"
       },
-      "elder2": {
-        "name": "Miguel Brown",
-        "role": "Anciano",
-        "description": "Supervisando el discipulado y grupos pequeños",
-        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+      "womenMinistry": {
+        "quote": "El Ministerio de Mujeres fortalece a cada mujer en su identidad en Cristo, brindando apoyo, oración y crecimiento espiritual en unidad.",
+        "name": "Mujeres",
+        "designation": "Ministerio de Mujeres"
+      },
+      "menMinistry": {
+        "quote": "El Ministerio de Varones levanta hombres íntegros, firmes en la fe y comprometidos con sus familias, su iglesia y su propósito en Dios.",
+        "name": "Varones",
+        "designation": "Ministerio de Varones"
+      },
+      "danceMinistry": {
+        "quote": "A través del arte y la expresión corporal, el Ministerio de Danza celebra la libertad en Cristo, llevando un mensaje de gozo y entrega espiritual.",
+        "name": "Danza",
+        "designation": "Ministerio de Danza"
+      },
+      "youthMinistry": {
+        "quote": "El Ministerio de Jóvenes impulsa a las nuevas generaciones a vivir una fe auténtica, desarrollando líderes apasionados por Dios y su Palabra.",
+        "name": "Jóvenes",
+        "designation": "Ministerio de Jóvenes"
+      },
+      "chaplainsMinistry": {
+        "quote": "El Ministerio de Capellanes brinda acompañamiento espiritual en momentos de necesidad, llevando consuelo, esperanza y amor a cada vida tocada.",
+        "name": "Capellanes",
+        "designation": "Ministerio de Capellanes"
       }
     }
   },
