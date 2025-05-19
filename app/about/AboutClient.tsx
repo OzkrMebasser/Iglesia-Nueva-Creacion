@@ -62,7 +62,7 @@ export default function AboutClient({ serverImages }: AboutClientProps) {
       quote: `${t("about.ourMinistries.menMinistry.quote")}`,
       name: `${t("about.ourMinistries.menMinistry.name")}`,
       designation: `${t("about.ourMinistries.menMinistry.designation")}`,
-      src: "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fabout-section%2Fministerios%2Fvarones-ai.webp?alt=media&token=f9c31054-ac51-49e1-9f8b-2e6b67b6814f",
+      src: "https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fabout-section%2Fministerios%2Fvarones-nueva-creacion.jpeg?alt=media&token=f4f70868-58ba-4f94-92d6-3346ff2951eb",
     },
     {
       quote: `${t("about.ourMinistries.danceMinistry.quote")}`,

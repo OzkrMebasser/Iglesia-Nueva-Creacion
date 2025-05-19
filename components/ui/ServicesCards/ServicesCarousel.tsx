@@ -77,7 +77,7 @@ const Gallery: React.FC = () => {
   return (
     <div className="text-center px-4 bg-transparent">
       {/* Gallery Container */}
-      <div className="border rounded-lg mx-auto bg-transparent max-w-4xl shadow-md overflow-hidden relative">
+      <div className="shadow-[1px_2px_44px_-9px_#6dc0ea] rounded-lg mx-auto bg-transparent max-w-4xl  overflow-hidden relative">
         {/* Content Area */}
         <div className="overflow-hidden">
           <div
