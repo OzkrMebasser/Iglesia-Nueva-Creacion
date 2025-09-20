@@ -8,6 +8,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import Link from "next/link";
+
 import "@/app/globals.css";
 
 const dancingScript = Dancing_Script({
@@ -27,7 +28,6 @@ const HeroBanner = () => {
   useEffect(() => {
     // const AOS = require("aos");
     // Aos.init();
-
     // AOS.init();
   }, []);
 
@@ -89,13 +89,19 @@ const HeroBanner = () => {
               </div>
 
               <div className="relative inline-block mt-6" data-aos="fade-up">
-                <button className="group relative font-inherit text-[1rem] px-[1rem] lg:px-[2.75rem] py-[0.625rem] tracking-[0.06em] rounded-[0.625rem] overflow-hidden transition-all duration-300 border-2 border-[#white] bg-gradient-to-r from-[rgba(109,192,234,0.1)] via-transparent to-[rgba(109,192,234,0.1)] text-[#6dc0ea] shadow-[inset_0_0_10px_rgba(109,192,234,0.4),0_0_9px_3px_rgba(109,192,234,0.1)] hover:text-[#b3e3ff] hover:shadow-[inset_0_0_10px_rgba(109,192,234,0.6),0_0_9px_3px_rgba(109,192,234,0.2)] sm:bg-[rgba(109,192,234,0.3)]">
-                  <span className="relative z-10 flex items-center gap-2 text-white font-bold lg">
-                    Contáctanos
-                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
-                  <span className="absolute top-0 left-[-6.5rem] w-[6.5rem] h-full bg-gradient-to-r from-transparent via-[rgba(109,192,234,0.1)] to-transparent transition-transform duration-400 ease-in-out group-hover:translate-x-[18rem] sm:via-[rgba(109,192,234,0.3)]"></span>
-                </button>
+                <Link
+                  href="https://wa.me/526121347548"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="group relative font-inherit text-[1rem] px-[1rem] lg:px-[2.75rem] py-[0.625rem] tracking-[0.06em] rounded-[0.625rem] overflow-hidden transition-all duration-300 border-2 border-[#white] bg-gradient-to-r from-[rgba(109,192,234,0.1)] via-transparent to-[rgba(109,192,234,0.1)] text-[#6dc0ea] shadow-[inset_0_0_10px_rgba(109,192,234,0.4),0_0_9px_3px_rgba(109,192,234,0.1)] hover:text-[#b3e3ff] hover:shadow-[inset_0_0_10px_rgba(109,192,234,0.6),0_0_9px_3px_rgba(109,192,234,0.2)] sm:bg-[rgba(109,192,234,0.3)]">
+                    <span className="relative z-10 flex items-center gap-2 text-white font-bold lg">
+                      Contáctanos!
+                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
+                    <span className="absolute top-0 left-[-6.5rem] w-[6.5rem] h-full bg-gradient-to-r from-transparent via-[rgba(109,192,234,0.1)] to-transparent transition-transform duration-400 ease-in-out group-hover:translate-x-[18rem] sm:via-[rgba(109,192,234,0.3)]"></span>
+                  </button>
+                </Link>
               </div>
             </div>
             {/* {"esta seccion me refiero"} */}

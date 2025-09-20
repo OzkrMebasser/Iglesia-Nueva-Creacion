@@ -59,7 +59,7 @@
       "saturday": {
         "day": "Saturday",
         "title": "Youth Meeting",
-        "time": "5:00 PM",
+        "time": "6:00 PM",
         "description": "A space for young people to grow in faith and fellowship"
       }
     },
@@ -244,7 +244,7 @@
     "thursday-service-title": "Bible Study",
     "thursday-service": "Thursday: 7:00 PM",
     "saturday-service-title": "Youth Meeting",
-    "youth-service": "Saturday: 5:00 PM",
+    "youth-service": "Saturday: 6:00 PM",
     "follow-us": "Follow Us",
     "rights": "All rights reserved",
     "made-with": "Made with ",
