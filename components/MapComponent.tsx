@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Title from "./ui/Title";
 import { useTranslation } from "react-i18next";
-import { PiVideoFill,PiX } from "react-icons/pi";
+import { PiVideoFill, PiX } from "react-icons/pi";
 
 const Map = () => {
   const { t } = useTranslation();
@@ -54,29 +54,27 @@ const Map = () => {
 
       {/* Modal */}
       {isModalOpen && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-    <div className="relative bg-white p-4 rounded-md w-[90%] max-w-xl">
-      <button
-        onClick={toggleModal}
-        title="Close modal"
-        className="absolute bottom-5 right-5 p-3 text-red-600 text-2xl font-bold z-50 bg-[#ffffff] rounded-full  hover:bg-red-100 transition duration-300 ease-in-out"
-      >
-      
-        <PiX className="h-7 w-7 inline " />
-      </button>
-      <div className="w-full aspect-video">
-        <iframe
-          className="w-full h-[400px]"
-          src="https://www.youtube-nocookie.com/embed/1KnI94wdmlg?rel=0"
-          title="Video de ubicación"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </div>
-    </div>
-  </div>
-)}
-
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="relative bg-white p-4 rounded-md w-[90%] max-w-xl">
+            <button
+              onClick={toggleModal}
+              title="Close modal"
+              className="absolute bottom-5 right-5 p-3 text-red-600 text-2xl font-bold z-50 bg-[#ffffff] rounded-full  hover:bg-red-100 transition duration-300 ease-in-out"
+            >
+              <PiX className="h-7 w-7 inline " />
+            </button>
+            <div className="w-full aspect-video">
+              <iframe
+                className="w-full h-[400px]"
+                src="https://www.youtube.com/embed/IjrPIHxpOh4?si=V-k0VxHYORy3QXs4"
+                title="Video de ubicación"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

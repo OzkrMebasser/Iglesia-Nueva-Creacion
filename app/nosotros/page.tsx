@@ -5,13 +5,13 @@ import AboutClient from './AboutClient';
 import { useEffect, useState } from 'react';
 
 export default function AboutPage() {
-  const [images, setImages] = useState([]);
+  const [gridImages, setGridImages] = useState([]);
 
   useEffect(() => {
     fetch('/data/images.json')
       .then((res) => res.json())
-      .then((data) => setImages(data.images));
+      .then((data) => setGridImages(data.grid_images));
   }, []);
 
-  return <AboutClient serverImages={images} />;
+  return <AboutClient serverImages={gridImages} />;
 }

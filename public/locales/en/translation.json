@@ -9,8 +9,19 @@
     "contact": "Contact"
   },
   "home": {
-    "welcome": "Welcome to Iglesia Nueva Creación",
-    "subtitle": "A place of worship, community, and spiritual growth",
+    "welcome": "Welcome!",
+    "here": "Here you will find",
+    "texts": [
+      "faith",
+      "peace",
+      "freedom",
+      "hope",
+      "new life",
+      "restoration",
+      "the love of God"
+    ],
+    "contact": "Contact us",
+
     "live-your-faith": {
       "title": "Live Your Faith in Community"
     },
@@ -132,7 +143,6 @@
         "designation": "Chaplains Ministry"
       }
     }
- 
   },
   "services": {
     "title": "Our Services & Ministries",
@@ -209,8 +219,8 @@
     "title": "Contact Us",
     "subtitle": "We'd love to hear from you. Get in touch with us for any questions or prayer requests.",
     "phone": {
-      "title": "Phone",
-      "value": "(555) 123-4567"
+      "one": "Phone #1",
+      "two": "Phone #2"
     },
     "email": {
       "title": "Email",
@@ -234,8 +244,11 @@
     "phone-title": "Phone",
     "email-title": "Email",
     "address": "Km 200, Transpeninsular Hwy South, Fracc. Divina Providencia, Zip Code 23088, La Paz, B.C.S.",
-    "phone": "(555) 123-4567",
-    "email": "info@gracechurch.com",
+    "phone": {
+      "one": "Phone #1",
+      "two": "Phone #2"
+    },
+    "email": "iglesianuevacreacionlapaz@gmail.com",
     "service-times": "Service Times",
     "sunday-service-title": "General Service",
     "sunday-service": "Sunday: 10:00 AM",

@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import BlurText from "@/components/ui/BlurText";
 import { Dancing_Script } from "next/font/google";
 import RotatingText from "@/components/ui/RotatingText";
@@ -18,7 +20,11 @@ const dancingScript = Dancing_Script({
 });
 
 const HeroBanner = () => {
+  const { t } = useTranslation();
+
+  const textos = t("home.texts", { returnObjects: true }) as string[];
   const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     if (window.innerWidth <= 768) {
       setIsMobile(true);
@@ -47,7 +53,7 @@ const HeroBanner = () => {
             <div className=" flex-1 absolute lg:relative z-10 pl-6 lg:pl-0">
               <h1 className=" mt-[22rem] lg:mt-[4rem] ">
                 <BlurText
-                  text="¡Bienvenidos!"
+                  text={t("home.welcome")}
                   delay={15500}
                   animateBy="words"
                   direction="top"
@@ -62,19 +68,12 @@ const HeroBanner = () => {
               >
                 <span className="text-[white] [text-shadow:_2px_3px_9px_#000000]">
                   {" "}
-                  Aqui encontrarás
+                  {/* Aqui encontrarás */}
+                  {t("home.here")}
                 </span>
                 <span className="relative inline-block ml-1">
                   <RotatingText
-                    texts={[
-                      "fe",
-                      "paz",
-                      "libertad",
-                      "esperanza",
-                      "nueva vida",
-                      "restauración",
-                      "el amor de Dios",
-                    ]}
+                    texts={textos}
                     mainClassName="text-[#21739e] w-full mx-auto overflow-hidden  bg-white p-[5px] rounded-lg shadow-lg"
                     staggerFrom={"last"}
                     initial={{ y: "100%" }}
@@ -94,9 +93,10 @@ const HeroBanner = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="group relative font-inherit text-[1rem] px-[1rem] lg:px-[2.75rem] py-[0.625rem] tracking-[0.06em] rounded-[0.625rem] overflow-hidden transition-all duration-300 border-2 border-[#white] bg-gradient-to-r from-[rgba(109,192,234,0.1)] via-transparent to-[rgba(109,192,234,0.1)] text-[#6dc0ea] shadow-[inset_0_0_10px_rgba(109,192,234,0.4),0_0_9px_3px_rgba(109,192,234,0.1)] hover:text-[#b3e3ff] hover:shadow-[inset_0_0_10px_rgba(109,192,234,0.6),0_0_9px_3px_rgba(109,192,234,0.2)] sm:bg-[rgba(109,192,234,0.3)]">
-                    <span className="relative z-10 flex items-center gap-2 text-white font-bold lg">
-                      Contáctanos!
+                  <button className="group relative font-inherit text-[1rem] px-[1rem] lg:px-[2.75rem] py-[0.625rem] tracking-[0.06em] rounded-[0.625rem] overflow-hidden transition-all duration-300 border-2 border-[#white] lg:bg-gradient-to-r from-[rgba(109,192,234,0.1)] via-transparent to-[rgba(109,192,234,0.1)] text-[#6dc0ea] shadow-[inset_0_0_10px_rgba(109,192,234,0.4),0_0_9px_3px_rgba(109,192,234,0.1)] hover:text-[#b3e3ff] hover:shadow-[inset_0_0_10px_rgba(109,192,234,0.6),0_0_9px_3px_rgba(109,192,234,0.2)] bg-primary-blue">
+                    <span className="relative z-10 flex items-center gap-2 text-black font-bold lg">
+                      {/* Contáctanos */}
+                      {t("home.contact")}
                       <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </span>
                     <span className="absolute top-0 left-[-6.5rem] w-[6.5rem] h-full bg-gradient-to-r from-transparent via-[rgba(109,192,234,0.1)] to-transparent transition-transform duration-400 ease-in-out group-hover:translate-x-[18rem] sm:via-[rgba(109,192,234,0.3)]"></span>
@@ -104,7 +104,7 @@ const HeroBanner = () => {
                 </Link>
               </div>
             </div>
-            {/* {"esta seccion me refiero"} */}
+            {/*  */}
             <div
               className="bg-[#000000] h-[80vh] lg:h-[100vh] w-full bg-banner-mobile lg:bg-banner-lg flex-1 mt-[3.95rem]  lg:mt-0"
               data-aos="fade-right"

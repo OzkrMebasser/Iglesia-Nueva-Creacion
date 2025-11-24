@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import { Instagram, Youtube, MapPin, Phone, Mail, Church } from "lucide-react";
+import { Youtube, MapPin, Phone, Mail, Church } from "lucide-react";
 import { LiaPrayingHandsSolid, LiaBibleSolid } from "react-icons/lia";
 import { GrGroup } from "react-icons/gr";
 import { FiFacebook, FiInstagram } from "react-icons/fi";
 import { IoLogoInstagram } from "react-icons/io5";
+import { FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -22,17 +24,43 @@ export default function Footer() {
                 <MapPin className="mr-2" size={20} />{" "}
                 <strong>{t("footer.address-title")}</strong>
               </p>
-              <p className="flex items-center">{t("footer.address")}</p>
+              <p className="flex items-center"
+              >{t("footer.address")}</p>
+
               <p className="flex items-center">
-                <Phone className="mr-2" size={18} />
-                <strong>{t("footer.phone-title")}</strong>
+                <FaWhatsapp className="mr-2" size={18} />
+                <strong>WhatsApp</strong>
               </p>
-              <p className="flex items-center">{t("footer.phone")}</p>
+              <Link
+                href="https://wa.me/526121347548"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-current after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100"
+              >
+                {t("footer.phone.one")}
+              </Link>
+              <br />
+              <Link
+                href="https://wa.me/526121079651"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-current after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100"
+              >
+                {t("footer.phone.two")}
+              </Link>
               <p className="flex items-center">
                 <Mail className="mr-2" size={18} />
                 <strong>{t("footer.email-title")}</strong>
               </p>
-              <p className="flex items-center">{t("footer.email")}</p>
+              <p className="flex items-center">
+                {" "}
+                <a
+                  href={`mailto:${t("footer.email")}`}
+                  className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-current after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100"
+                >
+                  {t("footer.email")}
+                </a>
+              </p>
             </div>
           </div>
 
@@ -80,9 +108,9 @@ export default function Footer() {
                 <FiFacebook size={24} />
               </a>
               <a href="#" className="hover:text-gray-300 transition-colors">
-                <FiInstagram size={24} />
+                <IoLogoInstagram size={24} />
               </a>
-              <a href="#" className="hover:text-gray-300 transition-colors">
+              <a href="" className="hover:text-gray-300 transition-colors">
                 <Youtube size={24} />
               </a>
             </div>

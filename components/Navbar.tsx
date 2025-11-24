@@ -48,9 +48,9 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "/", label: t("nav.home") },
-    { href: "/about", label: t("nav.about") },
-    { href: "/services", label: t("nav.services") },
-    { href: "/contact", label: t("nav.contact") },
+    { href: "/nosotros", label: t("nav.about") },
+    { href: "/servicios", label: t("nav.services") },
+    { href: "/contacto", label: t("nav.contact") },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -73,29 +73,27 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`${
-        isScrolled
-          ? "bg-[white] text-white shadow-md"
-          : "bg-[black]  text-gray-800"
-      } fixed top-0 w-full z-[99999] transition-all duration-300 ease-in-out `}
+      className={`fixed top-0 w-full z-[99999] transition-all duration-300 ease-in-out ${
+          isScrolled
+            ? "bg-[white] text-white shadow-md"
+            : "bg-[#000000]  text-gray-800 h-[95px] py-4"
+        } `}
     >
       {/* // <nav className="bg-white shadow-lg"> */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8    `}
+      >
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <span
-              className={`bg-[#000000] p-2 rounded-full mr-2   ${
-                isImageHidden
-                  ? "transition-all duration-1000 ease-in-out blur-0"
-                  : "hidden blur-md"
-              }`}
-            >
+            <span className={`bg-primary-blue p-1 rounded-full mr-2   `}>
               <Image
-                className="h-8 w-8 inline  scale-x-100 transition-all duration-1000 ease-in-out "
+                className={` inline  scale-x-100 transition-all duration-1000 ease-in-out ${
+                  isScrolled ? "h-10 w-10" : "h-[52px] w-[52px]"
+                } `}
                 width="100"
                 height="100"
-                src="https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fpaloma-clearbg.png?alt=media&token=8bcd4a7d-c403-43a6-b65e-27d2ce1d2b43"
-                alt="Logo paloma"
+                src="https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2FlogoIglesiaNuevaCreacionTransparente.png?alt=media&token=87110cd3-edf6-4d1a-986c-54d3e03a6664"
+                alt="Logo Iglesia Nueva Creación La Paz, B.C.S."
               />
             </span>
             <Link
@@ -106,7 +104,7 @@ export default function Navbar() {
             >
               {t("church.name")}
             </Link>
-            <span
+            {/* <span
               className={`shadow-[inset_1px_2px_44px_0px_#6dc0ea] rounded-full p-2  ml-2 ${
                 isImageHidden
                   ? "-translate-x-32 opacity-0 scale-50 blur-md"
@@ -120,7 +118,7 @@ export default function Navbar() {
                 src="https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fpaloma-clearbg.png?alt=media&token=8bcd4a7d-c403-43a6-b65e-27d2ce1d2b43"
                 alt="Logo paloma"
               />
-            </span>
+            </span> */}
           </div>
 
           {/* Desktop Navigation */}
@@ -208,7 +206,18 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <div className={cn("md:hidden", isOpen ? "block" : "hidden")}>
+      <div
+        className={cn(
+          "md:hidden",
+          isOpen
+            ? `block  ${
+                isScrolled
+                  ? "bg-[white] text-white shadow-md"
+                  : "bg-[#000000]  text-gray-800"
+              }`
+            : "hidden"
+        )}
+      >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navLinks.map((link) => (
             <Link

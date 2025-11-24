@@ -100,7 +100,7 @@ export default function AboutClient({ serverImages }: AboutClientProps) {
 
         <div className="absolute inset-0 bg-[black] bg-opacity-30 rounded-lg flex items-center justify-center z-10">
           <h1 className=" px-4">
-            {/* {t("about.title")} */}
+          
             <BlurText
               text={`${t("about.title")}`}
               delay={300}

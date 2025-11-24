@@ -9,8 +9,18 @@
     "contact": "Contacto"
   },
   "home": {
-    "welcome": "Bienvenidos a Iglesia Nueva Creación",
-    "subtitle": "Un lugar de adoración, comunidad y crecimiento espiritual",
+    "welcome": "¡Bienvenidos!",
+    "here": "Aquí encontrarás",
+    "texts": [
+      "fe",
+      "paz",
+      "libertad",
+      "esperanza",
+      "nueva vida",
+      "restauración",
+      "el amor de Dios"
+    ],
+    "contact": "Contáctanos",
     "live-your-faith": {
       "title": "Vive tu Fe en Comunidad"
     },
@@ -97,7 +107,6 @@
       "title": "Nuestros Ministerios",
 
       "pastors": {
-     
         "quote": "Héctor y Maribel Sánchez lideran con compasión y propósito, inspirando a otros a crecer en la fe y vivir con esperanza a través de su ejemplo.",
         "name": "Héctor y Maribel Sánchez",
         "designation": "Pastores principales"
@@ -209,8 +218,8 @@
     "title": "Contáctanos",
     "subtitle": "Nos encantaría saber de ti. Ponte en contacto con nosotros para cualquier pregunta o petición de oración.",
     "phone": {
-      "title": "Teléfono",
-      "value": "(555) 123-4567"
+      "one": "Teléfono #1",
+      "two": "Teléfono #2"
     },
     "email": {
       "title": "Correo",
@@ -234,8 +243,11 @@
     "phone-title": "Teléfono",
     "email-title": "Correo",
     "address": "Km 200, Carret. Transp. al Sur, Fracc. Divina Providencia, C.P. 23088, La Paz, B.C.S.",
-    "phone": "(555) 123-4567",
-    "email": "info@gracechurch.com",
+      "phone": {
+      "one": "Teléfono #1",
+      "two": "Teléfono #2"
+    },
+    "email": "iglesianuevacreacionlapaz@gmail.com",
     "service-times": "Horarios de Servicio",
     "sunday-service-title": "Servicio General",
     "sunday-service": "Domingo: 10:00 AM",
