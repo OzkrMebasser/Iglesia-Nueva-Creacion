@@ -104,7 +104,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">{t("footer.follow-us")}</h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-gray-300 transition-colors">
+              <a href="https://www.facebook.com/share/1AfZnJgkCW/" className="hover:text-gray-300 transition-colors">
                 <FiFacebook size={24} />
               </a>
               <a href="#" className="hover:text-gray-300 transition-colors">
