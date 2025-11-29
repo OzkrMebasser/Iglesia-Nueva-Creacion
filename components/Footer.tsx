@@ -24,8 +24,7 @@ export default function Footer() {
                 <MapPin className="mr-2" size={20} />{" "}
                 <strong>{t("footer.address-title")}</strong>
               </p>
-              <p className="flex items-center"
-              >{t("footer.address")}</p>
+              <p className="flex items-center">{t("footer.address")}</p>
 
               <p className="flex items-center">
                 <FaWhatsapp className="mr-2" size={18} />
@@ -104,13 +103,30 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">{t("footer.follow-us")}</h3>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/share/1AfZnJgkCW/" className="hover:text-gray-300 transition-colors">
+              <a
+                href="https://www.facebook.com/share/1AfZnJgkCW/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-300 transition-colors"
+              >
                 <FiFacebook size={24} />
               </a>
-              <a href="#" className="hover:text-gray-300 transition-colors">
+
+              <a
+                href="https://www.instagram.com/iglesianuevacreacionlapaz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-300 transition-colors"
+              >
                 <IoLogoInstagram size={24} />
               </a>
-              <a href="" className="hover:text-gray-300 transition-colors">
+
+              <a
+                href="https://www.youtube.com/@IglesiaNuevaCreación-b7x"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-300 transition-colors"
+              >
                 <Youtube size={24} />
               </a>
             </div>

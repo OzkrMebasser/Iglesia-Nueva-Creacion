@@ -1,151 +1,176 @@
-'use client'
+"use client";
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import Title from "@/components/ui/Title";
+import BlurText from "@/components/ui/BlurText";
+import emailjs from "@emailjs/browser";
+import { ArrowRight } from "lucide-react";
 
-import { useTranslation } from 'react-i18next'
-import { useState } from 'react'
-import { Mail, Phone, MapPin } from 'lucide-react'
+export default function ContactForm() {
+  const { t } = useTranslation();
 
-export default function Contact() {
-  const { t } = useTranslation()
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  })
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log(formData)
-  }
+  const [statusMessage, setStatusMessage] = useState("");
+
+  useEffect(() => {
+    const AOS = require("aos");
+    AOS.init();
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-  }
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+        formData,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
+      );
+
+      setStatusMessage(t("contact.success"));
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      setStatusMessage(t("contact.error"));
+    }
+  };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8">
-          {t('contact.title')}
-        </h1>
-        <p className="text-gray-600 text-center mb-12">
-          {t('contact.subtitle')}
-        </p>
-
-        {/* Contact Information */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="flex flex-col items-center text-center">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
-              <Phone className="text-white" size={24} />
-            </div>
-            <h3 className="font-bold mb-2">{t('contact.phone.title')}</h3>
-            <p className="text-gray-600">{t('contact.phone.value')}</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
-              <Mail className="text-white" size={24} />
-            </div>
-            <h3 className="font-bold mb-2">{t('contact.email.title')}</h3>
-            <p className="text-gray-600">{t('contact.email.value')}</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
-              <MapPin className="text-white" size={24} />
-            </div>
-            <h3 className="font-bold mb-2">{t('contact.address.title')}</h3>
-            <p className="text-gray-600">{t('contact.address.value')}</p>
-          </div>
+    <div className="w-full mx-auto pt-24 bg-cover bg-center bg-no-repeat bg-pattern bg-black">
+      <div className="relative h-auto">
+        <div className="pt-10 absolute inset-0 bg-[black] bg-opacity-30 rounded-lg flex items-center justify-center z-10">
+          <h1 className="px-4">
+            <BlurText
+              text={`${t("contact.title")}`}
+              delay={300}
+              animateBy="words"
+              direction="top"
+              className="text-3xl mt-0 lg:text-5xl font-black text-white [text-shadow:_2px_3px_9px_#000000] lg:text-shadow-none"
+            />
+          </h1>
         </div>
+      </div>
 
-        {/* Contact Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                {t('contact.form.name')}
+      <div className="w-full mx-auto py-24 md:px-6 lg:px-8 flex justify-center ">
+        <div className="w-full max-w-6xl flex flex-col lg:flex-row gap-8 items-stretch px-4">
+          {/* Formulario */}
+          <div
+            data-aos="fade-up"
+            className="w-full lg:w-1/2 bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-xl text-white"
+          >
+            <Title
+              title={t("contact.form-title")}
+              fontColor="primary-blue-text"
+              bgColor="bg-[black]"
+              borderSides="border-[#6dc0ea]"
+              tagName="h1"
+              pY="py-8"
+              shadow="shadow-[1px_2px_44px_-9px_#6dc0ea]"
+            />
+
+            <div className="mb-4">
+              <label className="block text-sm font-semibold mb-1">
+                {t("contact.name")}
               </label>
               <input
                 type="text"
-                id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                placeholder={t("contact.name")}
+                title={t("contact.name")}
+                className="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:ring-2 focus:ring-blue-400 outline-none"
               />
             </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                {t('contact.form.email')}
+
+            <div className="mb-4">
+              <label className="block text-sm font-semibold mb-1">
+                {t("contact.email")}
               </label>
               <input
                 type="email"
-                id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                placeholder={t("contact.email")}
+                title={t("contact.email")}
+                className="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:ring-2 focus:ring-blue-400 outline-none"
               />
             </div>
-          </div>
-          <div>
-            <label
-              htmlFor="subject"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              {t('contact.form.subject')}
-            </label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              {t('contact.form.message')}
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows={6}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-            />
-          </div>
-          <div>
+
+            <div className="mb-4">
+              <label className="block text-sm font-semibold mb-1">
+                {t("contact.message")}
+              </label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                rows={5}
+                required
+                placeholder={t("contact.message")}
+                title={t("contact.message")}
+                className="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:ring-2 focus:ring-blue-400 outline-none"
+              />
+            </div>
+
             <button
               type="submit"
-              className="w-full bg-primary text-white py-3 px-6 rounded-md hover:bg-primary/90 transition-colors"
+              onClick={handleSubmit}
+              className="group relative font-inherit text-[1rem] px-[1rem] lg:px-[2.75rem] py-[0.625rem] tracking-[0.06em] rounded-[0.625rem] overflow-hidden transition-all duration-300 border-2 border-[#white] lg:bg-gradient-to-r from-[rgba(109,192,234,0.1)] via-transparent to-[rgba(109,192,234,0.1)] text-[#6dc0ea] shadow-[inset_0_0_10px_rgba(109,192,234,0.4),0_0_9px_3px_rgba(109,192,234,0.1)] hover:text-[#b3e3ff] hover:shadow-[inset_0_0_10px_rgba(109,192,234,0.6),0_0_9px_3px_rgba(109,192,234,0.2)] bg-primary-blue"
             >
-              {t('contact.form.submit')}
+              <span className="relative z-10 flex items-center gap-2 text-black font-bold lg">
+                {/* Contáctanos */}
+                {t("contact.send")}
+
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+              <span className="absolute top-0 left-[-6.5rem] w-[6.5rem] h-full bg-gradient-to-r from-transparent via-[rgba(109,192,234,0.1)] to-transparent transition-transform duration-400 ease-in-out group-hover:translate-x-[18rem] sm:via-[rgba(109,192,234,0.3)]"></span>
             </button>
+
+            {/* <button
+              type="submit"
+              onClick={handleSubmit}
+              className="w-full mt-4 bg-blue-600 hover:bg-blue-700 transition-all font-semibold py-3 rounded-lg shadow-lg shadow-blue-900/40"
+            >
+              {t("contact.send")}
+            </button> */}
+
+            {statusMessage && (
+              <p className="text-center mt-4 text-green-300 font-semibold">
+                {statusMessage}
+              </p>
+            )}
           </div>
-        </form>
+
+          {/* Imagen con mismo tamaño del formulario */}
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="w-full lg:w-1/2 flex h-[615px]"
+          >
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/prueba-context-ecommerce.appspot.com/o/nueva-creacion-centro-rehab-iglesia-cristiana%2Fcontacto%2Fcontacto-iglesia-nueva-creacion.jpg?alt=media&token=b080ee8a-0c9d-4652-8f94-212881a2a2a3"
+              alt="Contact"
+              className="w-full h-full rounded-xl shadow-xl object-cover"
+            />
+          </div>
+        </div>
       </div>
     </div>
-  )
+  );
 }

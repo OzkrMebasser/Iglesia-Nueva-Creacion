@@ -217,26 +217,13 @@
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "We'd love to hear from you. Get in touch with us for any questions or prayer requests.",
-    "phone": {
-      "one": "Phone #1",
-      "two": "Phone #2"
-    },
-    "email": {
-      "title": "Email",
-      "value": "info@gracechurch.com"
-    },
-    "address": {
-      "title": "Address",
-      "value": "123 Main Street, City, State 12345"
-    },
-    "form": {
-      "name": "Your Name",
-      "email": "Your Email",
-      "subject": "Subject",
-      "message": "Your Message",
-      "submit": "Send Message"
-    }
+    "form-title": "Contact Form",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Your message has been sent successfully.",
+    "error": "There was an error sending the message. Please try again."
   },
   "footer": {
     "our-info": "Contact Information",

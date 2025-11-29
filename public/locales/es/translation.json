@@ -216,26 +216,13 @@
   },
   "contact": {
     "title": "Contáctanos",
-    "subtitle": "Nos encantaría saber de ti. Ponte en contacto con nosotros para cualquier pregunta o petición de oración.",
-    "phone": {
-      "one": "Teléfono #1",
-      "two": "Teléfono #2"
-    },
-    "email": {
-      "title": "Correo",
-      "value": "info@gracechurch.com"
-    },
-    "address": {
-      "title": "Dirección",
-      "value": "123 Calle Principal, Ciudad, Estado 12345"
-    },
-    "form": {
-      "name": "Tu Nombre",
-      "email": "Tu Correo",
-      "subject": "Asunto",
-      "message": "Tu Mensaje",
-      "submit": "Enviar Mensaje"
-    }
+    "form-title": "Formulario de Contacto",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "success": "Tu mensaje ha sido enviado correctamente.",
+    "error": "Ocurrió un error al enviar el mensaje. Inténtalo nuevamente."
   },
   "footer": {
     "our-info": "Información de Contacto",

@@ -3,9 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { IconArrowRight, IconArrowLeft } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
-
-
-
+import Title from "@/components/ui/Title";
 
 const Gallery: React.FC = () => {
   const { t } = useTranslation();
@@ -72,12 +70,10 @@ const Gallery: React.FC = () => {
     return () => window.removeEventListener("keyup", handleKey);
   }, [next, prev]);
 
-  
-
   return (
-    <div className="text-center px-4 bg-transparent">
+    <div className="text-center px-4 ">
       {/* Gallery Container */}
-      <div className="shadow-[1px_2px_44px_-9px_#6dc0ea] rounded-lg mx-auto bg-transparent max-w-4xl  overflow-hidden relative">
+      <div className="shadow-[1px_2px_44px_-9px_#6dc0ea] rounded-lg mx-auto max-w-4xl  overflow-hidden relative">
         {/* Content Area */}
         <div className="overflow-hidden">
           <div
@@ -99,68 +95,68 @@ const Gallery: React.FC = () => {
                   />
                 </div>
 
-                {/* Text Section */}
-                {/* <div className="w-full md:w-1/2 p-6 bg-[#000000b6] flex flex-col justify-center items-center">
-                  <h2 className="text-2xl font-bold mb-2 text-white">{frame.title}</h2>
-                  <p className="text-gray-500 mb-4">{frame.day}</p>
-                  <p className="text-gray-500 mb-4">{frame.time}</p>
-                  <p className="text-gray-700 mb-4">{frame.description}</p>
-                </div> */}
                 <motion.div
-                className="w-full md:w-1/2 p-6 bg-[#000000b6] flex flex-col justify-center items-center"
-            key={i}
-            initial={{
-              y: 20,
-              opacity: 0,
-            }}
-            animate={{
-              y: 0,
-              opacity: 1,
-            }}
-            exit={{
-              y: -20,
-              opacity: 0,
-            }}
-            transition={{
-              duration: 0.2,
-              ease: "easeInOut",
-            }}
-          >
-            <h3 className="text-2xl lg:text-3xl font-bold  text-white">
-              {frame.title}
-            </h3>
-            <p className="text-sm text-gray-500 dark:text-neutral-500">
-              {frame.day}
-            </p>
-            <p className="text-sm text-gray-500 dark:text-neutral-500">
-              {frame.time}
-            </p>
-            <motion.p className="text-lg text-[#e7e7e7] mt-6 dark:text-neutral-300">
-              {frame.description.split(" ").map((word, index) => (
-                <motion.span
-                  key={index}
+                  className="w-full md:w-1/2 p-6 inset-0 bg-white/10 backdrop-blur-md border border-white/20 flex flex-col justify-center items-center"
+                  key={i}
                   initial={{
-                    filter: "blur(10px)",
+                    y: 20,
                     opacity: 0,
-                    y: 5,
                   }}
                   animate={{
-                    filter: "blur(0px)",
-                    opacity: 1,
                     y: 0,
+                    opacity: 1,
+                  }}
+                  exit={{
+                    y: -20,
+                    opacity: 0,
                   }}
                   transition={{
                     duration: 0.2,
                     ease: "easeInOut",
-                    delay: 0.02 * index,
                   }}
-                  className="inline-block"
                 >
-                  {word}&nbsp;
-                </motion.span>
-              ))}
-            </motion.p>
-          </motion.div>
+                  {/* <h3 className="text-2xl lg:text-3xl font-bold  text-white">
+                    {frame.title}
+                  </h3> */}
+                  <Title
+                    title={frame.title}
+                    fontColor="primary-blue-text"
+                    bgColor="bg-[black]"
+                    borderSides="border-[#6dc0ea]"
+                    tagName="h3"
+                    pY="py-8"
+                    shadow="shadow-[1px_2px_44px_-9px_#6dc0ea]"
+                  />
+                  <p className="text-xl font-bold text-white pb-4">
+                    {frame.day}
+                  </p>
+                  <p className="text-sm text-white font-medium">{frame.time}</p>
+                  <motion.p className="text-lg text-[#e7e7e7] mt-6 dark:text-neutral-300">
+                    {frame.description.split(" ").map((word, index) => (
+                      <motion.span
+                        key={index}
+                        initial={{
+                          filter: "blur(10px)",
+                          opacity: 0,
+                          y: 5,
+                        }}
+                        animate={{
+                          filter: "blur(0px)",
+                          opacity: 1,
+                          y: 0,
+                        }}
+                        transition={{
+                          duration: 0.2,
+                          ease: "easeInOut",
+                          delay: 0.02 * index,
+                        }}
+                        className="inline-block"
+                      >
+                        {word}&nbsp;
+                      </motion.span>
+                    ))}
+                  </motion.p>
+                </motion.div>
               </div>
             ))}
           </div>
